@@ -8,15 +8,25 @@
 import UIKit
 
 class DefaultFundCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var fundNameLabel: UILabel!
+    @IBOutlet weak var imageView:     UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+        
+        self.backgroundColor    = .iceGrayCustom
+        self.layer.cornerRadius = 6
+        
+        fundNameLabel.text      = "Teste"
+        fundNameLabel.textColor = .mainGreenCustom
+        fundNameLabel.font      = UIFont.boldSystemFont(ofSize: 18)
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+    }
+    
+    func setUpImageView(image: UIImage) {
+        imageView.image = image
     }
 }

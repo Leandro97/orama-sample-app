@@ -8,21 +8,27 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var headerView:     UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     private let numberOfCells = 6
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor  = .lightGrayCustom
+        headerView.backgroundColor = .secondaryGreenCustom
         
         setUpCollectionView()
     }
     
     func setUpCollectionView() {
-        collectionView.delegate   = self
-        collectionView.dataSource = self
+        collectionView.delegate                     = self
+        collectionView.dataSource                   = self
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.backgroundColor              = .clear
         
-        collectionView.register(DefaultFundCollectionViewCell.self, forCellWithReuseIdentifier: DefaultFundCollectionViewCell.identifier())
+        let nib = UINib(nibName: DefaultFundCollectionViewCell.name(), bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: DefaultFundCollectionViewCell.identifier())
     }
 }
 
@@ -39,12 +45,15 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView:        UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DefaultFundCollectionViewCell.identifier(), for: indexPath)
-                                    as? DefaultFundCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DefaultFundCollectionViewCell.identifier(),
+                                                            for:                 indexPath) as? DefaultFundCollectionViewCell
+        else { return UICollectionViewCell() }
         
-        cell?.backgroundColor = .red
+        if indexPath.row % 2 == 0 {
+            cell.setUpImageView(image: UIImage(named: "orama-icon") ?? UIImage())
+        }
         
-        return cell ?? UICollectionViewCell()
+        return cell
     }
     
     func collectionView(_ collectionView:            UICollectionView,
@@ -52,7 +61,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
                         sizeForItemAt indexPath:     IndexPath) -> CGSize {
         
         let availableWidth  = collectionView.frame.width
-        let availableHeight = CGFloat(120)
+        let availableHeight = CGFloat(125)
         
         return CGSize(width: availableWidth, height: availableHeight)
     }

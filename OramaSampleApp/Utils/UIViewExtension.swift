@@ -12,4 +12,8 @@ extension UIView {
     public static func identifier() -> String {
         return "\(String(describing: self.self))Identifier"
     }
+    
+    public static func name() -> String {
+        return "\(String(describing: self.self))"
+    }
 }
