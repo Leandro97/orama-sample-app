@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C6313FF2625FAD00081B963 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6313FE2625FAD00081B963 /* UIViewExtension.swift */; };
+		9C63140C2625FF330081B963 /* DefaultFundCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C63140A2625FF330081B963 /* DefaultFundCollectionViewCell.swift */; };
+		9C63140D2625FF330081B963 /* DefaultFundCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C63140B2625FF330081B963 /* DefaultFundCollectionViewCell.xib */; };
 		9C781C682625F47A00A293D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C781C672625F47A00A293D1 /* AppDelegate.swift */; };
 		9C781C6A2625F47A00A293D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C781C692625F47A00A293D1 /* SceneDelegate.swift */; };
 		9C781C6C2625F47A00A293D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C781C6B2625F47A00A293D1 /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C6313FE2625FAD00081B963 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		9C63140A2625FF330081B963 /* DefaultFundCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFundCollectionViewCell.swift; sourceTree = "<group>"; };
+		9C63140B2625FF330081B963 /* DefaultFundCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultFundCollectionViewCell.xib; sourceTree = "<group>"; };
 		9C781C642625F47A00A293D1 /* OramaSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OramaSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C781C672625F47A00A293D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C781C692625F47A00A293D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +43,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C6313F92625F9450081B963 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9C6314012625FCE40081B963 /* DefaultFundCell */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9C6313FD2625FABE0081B963 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9C6313FE2625FAD00081B963 /* UIViewExtension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9C6314012625FCE40081B963 /* DefaultFundCell */ = {
+			isa = PBXGroup;
+			children = (
+				9C63140A2625FF330081B963 /* DefaultFundCollectionViewCell.swift */,
+				9C63140B2625FF330081B963 /* DefaultFundCollectionViewCell.xib */,
+			);
+			path = DefaultFundCell;
+			sourceTree = "<group>";
+		};
 		9C781C5B2625F47A00A293D1 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +87,8 @@
 		9C781C662625F47A00A293D1 /* OramaSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				9C6313FD2625FABE0081B963 /* Utils */,
+				9C6313F92625F9450081B963 /* UI */,
 				9C781C672625F47A00A293D1 /* AppDelegate.swift */,
 				9C781C692625F47A00A293D1 /* SceneDelegate.swift */,
 				9C781C6B2625F47A00A293D1 /* ViewController.swift */,
@@ -125,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C781C742625F47B00A293D1 /* LaunchScreen.storyboard in Resources */,
+				9C63140D2625FF330081B963 /* DefaultFundCollectionViewCell.xib in Resources */,
 				9C781C712625F47B00A293D1 /* Assets.xcassets in Resources */,
 				9C781C6F2625F47A00A293D1 /* Main.storyboard in Resources */,
 			);
@@ -137,7 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C6313FF2625FAD00081B963 /* UIViewExtension.swift in Sources */,
 				9C781C6C2625F47A00A293D1 /* ViewController.swift in Sources */,
+				9C63140C2625FF330081B963 /* DefaultFundCollectionViewCell.swift in Sources */,
 				9C781C682625F47A00A293D1 /* AppDelegate.swift in Sources */,
 				9C781C6A2625F47A00A293D1 /* SceneDelegate.swift in Sources */,
 			);
