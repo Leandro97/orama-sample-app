@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C0BEAD626275B92005CCCD2 /* FundRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEAD526275B92005CCCD2 /* FundRemoteDataSource.swift */; };
+		9C0BEAD926275C08005CCCD2 /* FundRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEAD826275C08005CCCD2 /* FundRemoteDataSourceImpl.swift */; };
+		9C0BEAE4262762CF005CCCD2 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEAE3262762CF005CCCD2 /* HomePresenter.swift */; };
+		9C0BEAE7262762E3005CCCD2 /* GetFundsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEAE6262762E3005CCCD2 /* GetFundsUseCase.swift */; };
+		9C0BEB1E26276E33005CCCD2 /* Fund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB1D26276E33005CCCD2 /* Fund.swift */; };
+		9C0BEB6026277DFD005CCCD2 /* Operability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB5F26277DFD005CCCD2 /* Operability.swift */; };
+		9C0BEB6326277E19005CCCD2 /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB6226277E19005CCCD2 /* Specification.swift */; };
+		9C0BEB6626277E28005CCCD2 /* FundRiskProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB6526277E28005CCCD2 /* FundRiskProfile.swift */; };
+		9C0BEB6F26277EBA005CCCD2 /* FundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB6E26277EBA005CCCD2 /* FundManager.swift */; };
+		9C0BEB7926277F77005CCCD2 /* StrategyVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB7826277F77005CCCD2 /* StrategyVideo.swift */; };
 		9C6313FF2625FAD00081B963 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6313FE2625FAD00081B963 /* UIViewExtension.swift */; };
 		9C781C682625F47A00A293D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C781C672625F47A00A293D1 /* AppDelegate.swift */; };
 		9C781C6A2625F47A00A293D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C781C692625F47A00A293D1 /* SceneDelegate.swift */; };
@@ -24,6 +34,16 @@
 		4FF1BF984AA88CEC6AFB5940 /* Pods-OramaSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OramaSampleApp.release.xcconfig"; path = "Target Support Files/Pods-OramaSampleApp/Pods-OramaSampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		819085125941ABC3F2B0B7FE /* libPods-OramaSampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OramaSampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81ADE0F2D19F2023103DBC90 /* Pods-OramaSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OramaSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-OramaSampleApp/Pods-OramaSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		9C0BEAD526275B92005CCCD2 /* FundRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundRemoteDataSource.swift; sourceTree = "<group>"; };
+		9C0BEAD826275C08005CCCD2 /* FundRemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundRemoteDataSourceImpl.swift; sourceTree = "<group>"; };
+		9C0BEAE3262762CF005CCCD2 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		9C0BEAE6262762E3005CCCD2 /* GetFundsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFundsUseCase.swift; sourceTree = "<group>"; };
+		9C0BEB1D26276E33005CCCD2 /* Fund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fund.swift; sourceTree = "<group>"; };
+		9C0BEB5F26277DFD005CCCD2 /* Operability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operability.swift; sourceTree = "<group>"; };
+		9C0BEB6226277E19005CCCD2 /* Specification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specification.swift; sourceTree = "<group>"; };
+		9C0BEB6526277E28005CCCD2 /* FundRiskProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundRiskProfile.swift; sourceTree = "<group>"; };
+		9C0BEB6E26277EBA005CCCD2 /* FundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundManager.swift; sourceTree = "<group>"; };
+		9C0BEB7826277F77005CCCD2 /* StrategyVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyVideo.swift; sourceTree = "<group>"; };
 		9C6313FE2625FAD00081B963 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		9C781C642625F47A00A293D1 /* OramaSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OramaSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C781C672625F47A00A293D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,8 +76,46 @@
 				81ADE0F2D19F2023103DBC90 /* Pods-OramaSampleApp.debug.xcconfig */,
 				4FF1BF984AA88CEC6AFB5940 /* Pods-OramaSampleApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9C0BEAD226275ACE005CCCD2 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				9C0BEAD526275B92005CCCD2 /* FundRemoteDataSource.swift */,
+				9C0BEAD826275C08005CCCD2 /* FundRemoteDataSourceImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		9C0BEAD426275B1B005CCCD2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9C0BEAE2262762C1005CCCD2 /* Home */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9C0BEADB26275D4E005CCCD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C0BEB1D26276E33005CCCD2 /* Fund.swift */,
+				9C0BEB5F26277DFD005CCCD2 /* Operability.swift */,
+				9C0BEB6226277E19005CCCD2 /* Specification.swift */,
+				9C0BEB6526277E28005CCCD2 /* FundRiskProfile.swift */,
+				9C0BEB6E26277EBA005CCCD2 /* FundManager.swift */,
+				9C0BEB7826277F77005CCCD2 /* StrategyVideo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C0BEAE2262762C1005CCCD2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9C0BEAE3262762CF005CCCD2 /* HomePresenter.swift */,
+				9C0BEAE6262762E3005CCCD2 /* GetFundsUseCase.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		9C6313F92625F9450081B963 /* UI */ = {
@@ -107,7 +165,10 @@
 		9C781C662625F47A00A293D1 /* OramaSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				9C0BEADB26275D4E005CCCD2 /* Model */,
 				9C7828902626438000C946CB /* Home */,
+				9C0BEAD426275B1B005CCCD2 /* Presenter */,
+				9C0BEAD226275ACE005CCCD2 /* Repository */,
 				9C6313FD2625FABE0081B963 /* Utils */,
 				9C781C672625F47A00A293D1 /* AppDelegate.swift */,
 				9C781C692625F47A00A293D1 /* SceneDelegate.swift */,
@@ -233,12 +294,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C0BEB6026277DFD005CCCD2 /* Operability.swift in Sources */,
+				9C0BEAD626275B92005CCCD2 /* FundRemoteDataSource.swift in Sources */,
+				9C0BEB6326277E19005CCCD2 /* Specification.swift in Sources */,
 				9C6313FF2625FAD00081B963 /* UIViewExtension.swift in Sources */,
+				9C0BEAE7262762E3005CCCD2 /* GetFundsUseCase.swift in Sources */,
 				9C78288C262638F100C946CB /* DefaultFundCollectionViewCell.swift in Sources */,
+				9C0BEAE4262762CF005CCCD2 /* HomePresenter.swift in Sources */,
+				9C0BEB6626277E28005CCCD2 /* FundRiskProfile.swift in Sources */,
+				9C0BEB7926277F77005CCCD2 /* StrategyVideo.swift in Sources */,
+				9C0BEB6F26277EBA005CCCD2 /* FundManager.swift in Sources */,
 				9C781C6C2625F47A00A293D1 /* HomeViewController.swift in Sources */,
 				9C781C682625F47A00A293D1 /* AppDelegate.swift in Sources */,
 				9C781C6A2625F47A00A293D1 /* SceneDelegate.swift in Sources */,
 				9C7828672626296C00C946CB /* UIColorExtension.swift in Sources */,
+				9C0BEB1E26276E33005CCCD2 /* Fund.swift in Sources */,
+				9C0BEAD926275C08005CCCD2 /* FundRemoteDataSourceImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
