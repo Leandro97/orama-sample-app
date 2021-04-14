@@ -91,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				9C7828902626438000C946CB /* Home */,
-				9C6313F92625F9450081B963 /* UI */,
 				9C6313FD2625FABE0081B963 /* Utils */,
 				9C781C672625F47A00A293D1 /* AppDelegate.swift */,
 				9C781C692625F47A00A293D1 /* SceneDelegate.swift */,
@@ -106,6 +105,7 @@
 		9C7828902626438000C946CB /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9C6313F92625F9450081B963 /* UI */,
 				9C781C6B2625F47A00A293D1 /* HomeViewController.swift */,
 			);
 			path = Home;
