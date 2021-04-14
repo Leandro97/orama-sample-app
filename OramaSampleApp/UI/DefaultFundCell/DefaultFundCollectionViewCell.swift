@@ -8,8 +8,10 @@
 import UIKit
 
 class DefaultFundCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var fundNameLabel: UILabel!
-    @IBOutlet weak var imageView:     UIImageView!
+    @IBOutlet weak var imageView:               UIImageView!
+    @IBOutlet weak var fundNameLabel:           UILabel!
+    @IBOutlet weak var minimumApplicationLabel: UILabel!
+    @IBOutlet weak var riskProfileLabel:        UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,7 +19,6 @@ class DefaultFundCollectionViewCell: UICollectionViewCell {
         self.backgroundColor    = .iceGrayCustom
         self.layer.cornerRadius = 6
         
-        fundNameLabel.text      = "Teste"
         fundNameLabel.textColor = .mainGreenCustom
         fundNameLabel.font      = UIFont.boldSystemFont(ofSize: 18)
     }
