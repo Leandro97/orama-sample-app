@@ -16,10 +16,10 @@ struct Specification: Codable {
 }
 
 struct FundRiskProfile: Codable {
-    let name: String
+    let riskScore: Int
     
     private enum CodingKeys: String, CodingKey {
-       case name = "name"
+       case riskScore = "score_range_order"
     }
 }
 

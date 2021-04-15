@@ -54,9 +54,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                                                             for:                 indexPath) as? DefaultFundCollectionViewCell
         else { return UICollectionViewCell() }
         
-        if indexPath.row % 2 == 0 {
-            cell.setUpImageView(image: UIImage(named: "orama-icon") ?? UIImage())
-        }
+        let fundDto = fundList[indexPath.row]
+        
+        cell.configureCell(fundName:                 fundDto.simpleName,
+                           minimumApplicationAmount: fundDto.operability.minimumInitialApplicationAmount,
+                           riskProfile:              fundDto.specification.fundRiskProfile.riskScore)
         
         return cell
     }

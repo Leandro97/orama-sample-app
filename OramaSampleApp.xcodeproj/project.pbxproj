@@ -26,6 +26,9 @@
 		9C7828672626296C00C946CB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7828662626296C00C946CB /* UIColorExtension.swift */; };
 		9C78288C262638F100C946CB /* DefaultFundCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C78288A262638F100C946CB /* DefaultFundCollectionViewCell.swift */; };
 		9C78288D262638F100C946CB /* DefaultFundCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C78288B262638F100C946CB /* DefaultFundCollectionViewCell.xib */; };
+		9C907CF82628D55000DC8E0D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C907CF72628D55000DC8E0D /* DetailsViewController.swift */; };
+		9C907D022628D5EB00DC8E0D /* FundDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C907D012628D5EB00DC8E0D /* FundDetailCollectionViewCell.swift */; };
+		9C907D052628D5F300DC8E0D /* FundDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C907D042628D5F300DC8E0D /* FundDetailCollectionViewCell.xib */; };
 		A765D6CCAE81D29C592B8B8B /* libPods-OramaSampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 819085125941ABC3F2B0B7FE /* libPods-OramaSampleApp.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,9 @@
 		9C7828662626296C00C946CB /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		9C78288A262638F100C946CB /* DefaultFundCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFundCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C78288B262638F100C946CB /* DefaultFundCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultFundCollectionViewCell.xib; sourceTree = "<group>"; };
+		9C907CF72628D55000DC8E0D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		9C907D012628D5EB00DC8E0D /* FundDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		9C907D042628D5F300DC8E0D /* FundDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FundDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,7 @@
 			children = (
 				9C0BEADB26275D4E005CCCD2 /* Domain */,
 				9C7828902626438000C946CB /* Home */,
+				9C907CF62628D53E00DC8E0D /* Details */,
 				9C0BEAD426275B1B005CCCD2 /* Presentation */,
 				9C0BEAD226275ACE005CCCD2 /* Repository */,
 				9C6313FD2625FABE0081B963 /* Utils */,
@@ -184,6 +191,32 @@
 				9C781C6B2625F47A00A293D1 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		9C907CF62628D53E00DC8E0D /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				9C907CFA2628D55800DC8E0D /* UI */,
+				9C907CF72628D55000DC8E0D /* DetailsViewController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		9C907CFA2628D55800DC8E0D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9C907CFB2628D56A00DC8E0D /* FundDetailCell */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9C907CFB2628D56A00DC8E0D /* FundDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				9C907D012628D5EB00DC8E0D /* FundDetailCollectionViewCell.swift */,
+				9C907D042628D5F300DC8E0D /* FundDetailCollectionViewCell.xib */,
+			);
+			path = FundDetailCell;
 			sourceTree = "<group>";
 		};
 		FA502A92E781F493AFB38C1D /* Frameworks */ = {
@@ -256,6 +289,7 @@
 				9C78288D262638F100C946CB /* DefaultFundCollectionViewCell.xib in Resources */,
 				9C781C712625F47B00A293D1 /* Assets.xcassets in Resources */,
 				9C781C6F2625F47A00A293D1 /* Main.storyboard in Resources */,
+				9C907D052628D5F300DC8E0D /* FundDetailCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,9 +333,11 @@
 				9C78288C262638F100C946CB /* DefaultFundCollectionViewCell.swift in Sources */,
 				9C0BEAE4262762CF005CCCD2 /* HomePresenter.swift in Sources */,
 				9C0BEB7926277F77005CCCD2 /* StrategyVideo.swift in Sources */,
+				9C907D022628D5EB00DC8E0D /* FundDetailCollectionViewCell.swift in Sources */,
 				9C0BEB6F26277EBA005CCCD2 /* FundManager.swift in Sources */,
 				9C781C6C2625F47A00A293D1 /* HomeViewController.swift in Sources */,
 				9C781C682625F47A00A293D1 /* AppDelegate.swift in Sources */,
+				9C907CF82628D55000DC8E0D /* DetailsViewController.swift in Sources */,
 				9C781C6A2625F47A00A293D1 /* SceneDelegate.swift in Sources */,
 				9C7828672626296C00C946CB /* UIColorExtension.swift in Sources */,
 				9C0BEB1E26276E33005CCCD2 /* Fund.swift in Sources */,
