@@ -19,7 +19,11 @@ class HomePresenter {
     }
     
     func getFunds() {
+        self.view.activityIndicator.startAnimating()
+        
         getFundsUseCase.getFunds() { funds in
+            self.view.activityIndicator.stopAnimating()
+            
             self.view.fundList = funds
             self.view.collectionView.reloadData()
         }

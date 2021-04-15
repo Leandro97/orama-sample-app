@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="95e-dy-Md5">
+                                <rect key="frame" x="197" y="383" width="20" height="20"/>
+                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzi-yb-yHP" userLabel="HeaderView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                 <subviews>
@@ -37,6 +40,7 @@
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstItem="szD-xX-pbS" firstAttribute="centerY" secondItem="kzi-yb-yHP" secondAttribute="centerY" id="7RM-6a-MBE"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="6N7-E9-1Ss" secondAttribute="trailing" constant="217" id="FVk-z5-ho0"/>
                                     <constraint firstAttribute="height" constant="90" id="Msc-DN-7JA"/>
                                     <constraint firstAttribute="trailing" secondItem="szD-xX-pbS" secondAttribute="trailing" constant="16" id="S1L-x6-PmG"/>
                                     <constraint firstItem="6N7-E9-1Ss" firstAttribute="centerY" secondItem="kzi-yb-yHP" secondAttribute="centerY" id="dB4-5n-o4M"/>
@@ -72,12 +76,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kzi-yb-yHP" secondAttribute="trailing" id="Y0H-vz-jPt"/>
                             <constraint firstItem="cRo-cY-egk" firstAttribute="top" secondItem="kzi-yb-yHP" secondAttribute="bottom" constant="10" id="fw9-24-iLk"/>
                             <constraint firstItem="kzi-yb-yHP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gUU-RL-0OO"/>
+                            <constraint firstItem="95e-dy-Md5" firstAttribute="centerX" secondItem="cRo-cY-egk" secondAttribute="centerX" id="izt-Uc-pPy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cRo-cY-egk" secondAttribute="bottom" constant="50" id="jjZ-Hn-Kse"/>
                             <constraint firstItem="kzi-yb-yHP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pwe-03-5Ib"/>
+                            <constraint firstItem="95e-dy-Md5" firstAttribute="centerY" secondItem="cRo-cY-egk" secondAttribute="centerY" id="qTQ-iV-a85"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cRo-cY-egk" secondAttribute="trailing" constant="16" id="xkf-PF-6OE"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="95e-dy-Md5" id="AUy-zZ-KAi"/>
                         <outlet property="collectionView" destination="cRo-cY-egk" id="B1t-65-MST"/>
                         <outlet property="headerView" destination="kzi-yb-yHP" id="RdB-Nu-F7q"/>
                     </connections>

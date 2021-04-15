@@ -8,8 +8,9 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    @IBOutlet weak var headerView:     UIView!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var headerView:        UIView!
+    @IBOutlet weak var collectionView:    UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var fundList       = [Fund]()
     lazy var presenter = HomePresenter(view:            self,
