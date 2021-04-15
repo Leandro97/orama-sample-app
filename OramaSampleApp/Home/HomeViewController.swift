@@ -11,9 +11,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var headerView:     UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var fundList = [Fund]()
-    
-    lazy var presenter = HomePresenter(getFundsUseCase: GetFundsUseCase())
+    var fundList       = [Fund]()
+    lazy var presenter = HomePresenter(view:            self,
+                                       getFundsUseCase: GetFundsUseCase())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +29,7 @@ class HomeViewController: UIViewController {
         collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor              = .clear
         
-        presenter.getFunds() { funds in
-            self.fundList = funds
-            self.collectionView.reloadData()
-        }
+        presenter.getFunds()
         
         let nib = UINib(nibName: DefaultFundCollectionViewCell.name(), bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: DefaultFundCollectionViewCell.identifier())

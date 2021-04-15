@@ -14,3 +14,12 @@ struct Specification: Codable {
        case fundRiskProfile = "fund_risk_profile"
     }
 }
+
+struct FundRiskProfile: Codable {
+    let name: String
+    
+    private enum CodingKeys: String, CodingKey {
+       case name = "name"
+    }
+}
+

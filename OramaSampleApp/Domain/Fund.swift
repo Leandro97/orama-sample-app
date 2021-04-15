@@ -14,7 +14,7 @@ struct Fund: Codable {
     let specification: Specification
     let operability:   Operability
     let fundManager:   FundManager
-    let strategyVideo: StrategyVideo
+    let strategyVideo: StrategyVideo?
     
 //    //Home
 //    simple_name

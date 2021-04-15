@@ -14,7 +14,6 @@
 		9C0BEB1E26276E33005CCCD2 /* Fund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB1D26276E33005CCCD2 /* Fund.swift */; };
 		9C0BEB6026277DFD005CCCD2 /* Operability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB5F26277DFD005CCCD2 /* Operability.swift */; };
 		9C0BEB6326277E19005CCCD2 /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB6226277E19005CCCD2 /* Specification.swift */; };
-		9C0BEB6626277E28005CCCD2 /* FundRiskProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB6526277E28005CCCD2 /* FundRiskProfile.swift */; };
 		9C0BEB6F26277EBA005CCCD2 /* FundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB6E26277EBA005CCCD2 /* FundManager.swift */; };
 		9C0BEB7926277F77005CCCD2 /* StrategyVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB7826277F77005CCCD2 /* StrategyVideo.swift */; };
 		9C6313FF2625FAD00081B963 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6313FE2625FAD00081B963 /* UIViewExtension.swift */; };
@@ -41,7 +40,6 @@
 		9C0BEB1D26276E33005CCCD2 /* Fund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fund.swift; sourceTree = "<group>"; };
 		9C0BEB5F26277DFD005CCCD2 /* Operability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operability.swift; sourceTree = "<group>"; };
 		9C0BEB6226277E19005CCCD2 /* Specification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specification.swift; sourceTree = "<group>"; };
-		9C0BEB6526277E28005CCCD2 /* FundRiskProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundRiskProfile.swift; sourceTree = "<group>"; };
 		9C0BEB6E26277EBA005CCCD2 /* FundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundManager.swift; sourceTree = "<group>"; };
 		9C0BEB7826277F77005CCCD2 /* StrategyVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyVideo.swift; sourceTree = "<group>"; };
 		9C6313FE2625FAD00081B963 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -88,25 +86,24 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		9C0BEAD426275B1B005CCCD2 /* Presenter */ = {
+		9C0BEAD426275B1B005CCCD2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				9C0BEAE2262762C1005CCCD2 /* Home */,
 			);
-			path = Presenter;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
-		9C0BEADB26275D4E005CCCD2 /* Model */ = {
+		9C0BEADB26275D4E005CCCD2 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
 				9C0BEB1D26276E33005CCCD2 /* Fund.swift */,
 				9C0BEB5F26277DFD005CCCD2 /* Operability.swift */,
 				9C0BEB6226277E19005CCCD2 /* Specification.swift */,
-				9C0BEB6526277E28005CCCD2 /* FundRiskProfile.swift */,
 				9C0BEB6E26277EBA005CCCD2 /* FundManager.swift */,
 				9C0BEB7826277F77005CCCD2 /* StrategyVideo.swift */,
 			);
-			path = Model;
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		9C0BEAE2262762C1005CCCD2 /* Home */ = {
@@ -165,9 +162,9 @@
 		9C781C662625F47A00A293D1 /* OramaSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				9C0BEADB26275D4E005CCCD2 /* Model */,
+				9C0BEADB26275D4E005CCCD2 /* Domain */,
 				9C7828902626438000C946CB /* Home */,
-				9C0BEAD426275B1B005CCCD2 /* Presenter */,
+				9C0BEAD426275B1B005CCCD2 /* Presentation */,
 				9C0BEAD226275ACE005CCCD2 /* Repository */,
 				9C6313FD2625FABE0081B963 /* Utils */,
 				9C781C672625F47A00A293D1 /* AppDelegate.swift */,
@@ -301,7 +298,6 @@
 				9C0BEAE7262762E3005CCCD2 /* GetFundsUseCase.swift in Sources */,
 				9C78288C262638F100C946CB /* DefaultFundCollectionViewCell.swift in Sources */,
 				9C0BEAE4262762CF005CCCD2 /* HomePresenter.swift in Sources */,
-				9C0BEB6626277E28005CCCD2 /* FundRiskProfile.swift in Sources */,
 				9C0BEB7926277F77005CCCD2 /* StrategyVideo.swift in Sources */,
 				9C0BEB6F26277EBA005CCCD2 /* FundManager.swift in Sources */,
 				9C781C6C2625F47A00A293D1 /* HomeViewController.swift in Sources */,

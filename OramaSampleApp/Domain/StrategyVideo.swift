@@ -1,5 +1,5 @@
 //
-//  FundRiskProfile.swift
+//  StrategyVideo.swift
 //  OramaSampleApp
 //
 //  Created by Leandro Martins de Freitas on 14/04/21.
@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct FundRiskProfile: Codable {
-    let name: String
+struct StrategyVideo: Codable {
+    let thumbnail: String?
     
     private enum CodingKeys: String, CodingKey {
-       case name = "name"
+       case thumbnail = "thumbnail"
     }
 }
