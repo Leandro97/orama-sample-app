@@ -1,20 +1,20 @@
 //
 //  Fund.swift
-//  OramaSampleApp
+//  FundResponse
 //
 //  Created by Leandro Martins de Freitas on 14/04/21.
 //
 
 import Foundation
 
-struct Fund: Codable {
+struct FundResponse: Codable {
     let initialDate:   String
     let simpleName:    String
     let fullName:      String
-    let specification: Specification
-    let operability:   Operability
-    let fundManager:   FundManager
-    let strategyVideo: StrategyVideo?
+    let specification: SpecificationResponse
+    let operability:   OperabilityResponse
+    let fundManager:   FundManagerResponse
+    let strategyVideo: StrategyVideoResponse?
 
     private enum CodingKeys: String, CodingKey {
        case initialDate   = "initial_date",

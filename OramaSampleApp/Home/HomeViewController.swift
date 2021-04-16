@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView:    UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    var fundList       = [Fund]()
+    var fundList       = [FundDto]()
     lazy var presenter = HomePresenter(view:            self,
                                        getFundsUseCase: GetFundsUseCase())
     
@@ -57,8 +57,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let fundDto = fundList[indexPath.row]
         
         cell.configureCell(fundName:                 fundDto.simpleName,
-                           minimumApplicationAmount: fundDto.operability.minimumInitialApplicationAmount,
-                           riskProfile:              fundDto.specification.fundRiskProfile.riskScore)
+                           minimumApplicationAmount: fundDto.minimumInitialApplicationAmount,
+                           riskProfile:              fundDto.riskScore)
         
         return cell
     }

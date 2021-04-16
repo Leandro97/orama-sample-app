@@ -1,5 +1,5 @@
 //
-//  Operability.swift
+//  OperabilityResponse.swift
 //  OramaSampleApp
 //
 //  Created by Leandro Martins de Freitas on 14/04/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Operability: Codable {
+struct OperabilityResponse: Codable {
     let minimumInitialApplicationAmount: String
     
     private enum CodingKeys: String, CodingKey {
