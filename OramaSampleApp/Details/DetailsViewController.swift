@@ -1,27 +1,41 @@
 //
-//  HomeViewController.swift
+//  DetailsViewController.swift
 //  OramaSampleApp
 //
-//  Created by Leandro Martins de Freitas on 13/04/21.
+//  Created by Leandro Martins de Freitas on 15/04/21.
 //
 
+import Foundation
 import UIKit
 
-class HomeViewController: UIViewController {
-    @IBOutlet weak var headerView:        UIView!
-    @IBOutlet weak var collectionView:    UICollectionView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+class DetailsViewController: UIViewController {
+    @IBOutlet weak var headerView:     UIView!
+    @IBOutlet weak var backButton:     UIButton!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var fundList       = [FundDto]()
-    lazy var presenter = HomePresenter(view:            self,
-                                       getFundsUseCase: GetFundsUseCase())
+    lazy var presenter = DetailsPresenter(view:            self,
+                                          getFundsUseCase: GetFundsUseCase())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor  = .lightGrayCustom
-        headerView.backgroundColor = .secondaryGreenCustom
         
+        setUpHeaderView()
         setUpCollectionView()
+    }
+    
+    func setUpHeaderView() {
+        headerView.backgroundColor = .secondaryGreenCustom
+        backButton.tintColor       = .white
+        
+        backButton.addTarget(self,
+                             action: #selector(goBack),
+                             for:    .touchUpInside)
+    }
+    
+    @objc func goBack() {
+        self.dismiss(animated: true, completion: nil)
     }
     
     func setUpCollectionView() {
@@ -32,12 +46,12 @@ class HomeViewController: UIViewController {
         
         presenter.getFunds()
         
-        let nib = UINib(nibName: DefaultFundCollectionViewCell.name(), bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: DefaultFundCollectionViewCell.identifier())
+        let nib = UINib(nibName: FundDetailCollectionViewCell.name(), bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: FundDetailCollectionViewCell.identifier())
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension DetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -60,21 +74,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView:        UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DefaultFundCollectionViewCell.identifier(),
-                                                            for:                 indexPath) as? DefaultFundCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FundDetailCollectionViewCell.identifier(),
+                                                            for:                 indexPath) as? FundDetailCollectionViewCell
         else { return UICollectionViewCell() }
         
         let fundDto = fundList[indexPath.row]
         
-        cell.configureCell(fundName:                 fundDto.simpleName,
-                           minimumApplicationAmount: fundDto.minimumInitialApplicationAmount,
-                           riskProfile:              fundDto.riskScore)
+        //cell.configureCell()
         
         return cell
-    }
-    
-    func collectionView(_ collectionView:          UICollectionView,
-                        didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "HomeToDetailSegue", sender: nil)
     }
 }

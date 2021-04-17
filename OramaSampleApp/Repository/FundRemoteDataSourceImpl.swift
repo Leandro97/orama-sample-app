@@ -11,10 +11,10 @@ import Alamofire
 class FundRemoteDataSourceImpl: FundRemoteDataSource {
     static var api_url: String { "https://s3.amazonaws.com/orama-media/json/fund_detail_full.json" }
     
-    func getFunds(completion: @escaping ([Fund]) -> Void) {
+    func getFunds(completion: @escaping ([FundResponse]) -> Void) {
         AF.request(FundRemoteDataSourceImpl.api_url)
             .validate()
-            .responseDecodable(of: [Fund].self) { response in
+            .responseDecodable(of: [FundResponse].self) { response in
                 completion(response.value ?? [])
             }
     }

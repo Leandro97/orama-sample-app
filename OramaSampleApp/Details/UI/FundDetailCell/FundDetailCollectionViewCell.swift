@@ -1,13 +1,14 @@
 //
-//  DefaultFundCollectionViewCell.swift
+//  FundDetailCollectionViewCell.swift
 //  OramaSampleApp
 //
-//  Created by Leandro Martins de Freitas on 13/04/21.
+//  Created by Leandro Martins de Freitas on 15/04/21.
 //
 
 import UIKit
 
-class DefaultFundCollectionViewCell: UICollectionViewCell {
+class FundDetailCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var imageView:               UIImageView!
     @IBOutlet weak var fundNameLabel:           UILabel!
     @IBOutlet weak var minimumApplicationLabel: UILabel!
     @IBOutlet weak var riskProfileLabel:        UILabel!
@@ -26,12 +27,7 @@ class DefaultFundCollectionViewCell: UICollectionViewCell {
         super.init(coder: coder)
     }
     
-    func configureCell(fundName:                 String,
-                       minimumApplicationAmount: String,
-                       riskProfile:              Int) {
-        
-        fundNameLabel.text           = fundName
-        minimumApplicationLabel.text = "Aplicação mínima: R$ \(minimumApplicationAmount)"
-        riskProfileLabel.text        = "Escala de risco: \(riskProfile)"
+    func setUpImageView(image: UIImage) {
+        imageView.image = image
     }
 }

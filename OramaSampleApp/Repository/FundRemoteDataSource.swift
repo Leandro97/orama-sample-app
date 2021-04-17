@@ -8,5 +8,5 @@
 import Foundation
 
 protocol FundRemoteDataSource {
-    func getFunds(completion: @escaping ([Fund]) -> Void)
+    func getFunds(completion: @escaping ([FundResponse]) -> Void)
 }

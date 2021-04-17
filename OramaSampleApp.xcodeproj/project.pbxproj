@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		257CD8031332621F9093C9E8 /* libPods-OramaSampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1BCEF4F98AC7AA1988D431 /* libPods-OramaSampleApp.a */; };
+		9C0890A2262B57F100E3F643 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0890A1262B57F100E3F643 /* DetailsPresenter.swift */; };
 		9C0BEAD626275B92005CCCD2 /* FundRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEAD526275B92005CCCD2 /* FundRemoteDataSource.swift */; };
 		9C0BEAD926275C08005CCCD2 /* FundRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEAD826275C08005CCCD2 /* FundRemoteDataSourceImpl.swift */; };
 		9C0BEAE4262762CF005CCCD2 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEAE3262762CF005CCCD2 /* HomePresenter.swift */; };
 		9C0BEAE7262762E3005CCCD2 /* GetFundsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEAE6262762E3005CCCD2 /* GetFundsUseCase.swift */; };
-		9C0BEB1E26276E33005CCCD2 /* Fund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB1D26276E33005CCCD2 /* Fund.swift */; };
-		9C0BEB6026277DFD005CCCD2 /* Operability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB5F26277DFD005CCCD2 /* Operability.swift */; };
-		9C0BEB6326277E19005CCCD2 /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB6226277E19005CCCD2 /* Specification.swift */; };
-		9C0BEB6F26277EBA005CCCD2 /* FundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB6E26277EBA005CCCD2 /* FundManager.swift */; };
-		9C0BEB7926277F77005CCCD2 /* StrategyVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB7826277F77005CCCD2 /* StrategyVideo.swift */; };
+		9C0BEB1E26276E33005CCCD2 /* FundResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB1D26276E33005CCCD2 /* FundResponse.swift */; };
+		9C0BEB6026277DFD005CCCD2 /* OperabilityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB5F26277DFD005CCCD2 /* OperabilityResponse.swift */; };
+		9C0BEB6326277E19005CCCD2 /* SpecificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB6226277E19005CCCD2 /* SpecificationResponse.swift */; };
+		9C0BEB6F26277EBA005CCCD2 /* FundManagerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB6E26277EBA005CCCD2 /* FundManagerResponse.swift */; };
+		9C0BEB7926277F77005CCCD2 /* StrategyVideoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEB7826277F77005CCCD2 /* StrategyVideoResponse.swift */; };
 		9C6313FF2625FAD00081B963 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6313FE2625FAD00081B963 /* UIViewExtension.swift */; };
 		9C781C682625F47A00A293D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C781C672625F47A00A293D1 /* AppDelegate.swift */; };
 		9C781C6A2625F47A00A293D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C781C692625F47A00A293D1 /* SceneDelegate.swift */; };
@@ -26,22 +28,25 @@
 		9C7828672626296C00C946CB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7828662626296C00C946CB /* UIColorExtension.swift */; };
 		9C78288C262638F100C946CB /* DefaultFundCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C78288A262638F100C946CB /* DefaultFundCollectionViewCell.swift */; };
 		9C78288D262638F100C946CB /* DefaultFundCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C78288B262638F100C946CB /* DefaultFundCollectionViewCell.xib */; };
-		A765D6CCAE81D29C592B8B8B /* libPods-OramaSampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 819085125941ABC3F2B0B7FE /* libPods-OramaSampleApp.a */; };
+		9C7CA08A2629B3A5009E6E24 /* FundDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7CA0892629B3A5009E6E24 /* FundDto.swift */; };
+		9C907CF82628D55000DC8E0D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C907CF72628D55000DC8E0D /* DetailsViewController.swift */; };
+		9C907D022628D5EB00DC8E0D /* FundDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C907D012628D5EB00DC8E0D /* FundDetailCollectionViewCell.swift */; };
+		9C907D052628D5F300DC8E0D /* FundDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C907D042628D5F300DC8E0D /* FundDetailCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4FF1BF984AA88CEC6AFB5940 /* Pods-OramaSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OramaSampleApp.release.xcconfig"; path = "Target Support Files/Pods-OramaSampleApp/Pods-OramaSampleApp.release.xcconfig"; sourceTree = "<group>"; };
-		819085125941ABC3F2B0B7FE /* libPods-OramaSampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OramaSampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81ADE0F2D19F2023103DBC90 /* Pods-OramaSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OramaSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-OramaSampleApp/Pods-OramaSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		451837898992F33672DF54A3 /* Pods-OramaSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OramaSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-OramaSampleApp/Pods-OramaSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7A3488BB2574E4CD8D91CA7E /* Pods-OramaSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OramaSampleApp.release.xcconfig"; path = "Target Support Files/Pods-OramaSampleApp/Pods-OramaSampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		9C0890A1262B57F100E3F643 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		9C0BEAD526275B92005CCCD2 /* FundRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundRemoteDataSource.swift; sourceTree = "<group>"; };
 		9C0BEAD826275C08005CCCD2 /* FundRemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundRemoteDataSourceImpl.swift; sourceTree = "<group>"; };
 		9C0BEAE3262762CF005CCCD2 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		9C0BEAE6262762E3005CCCD2 /* GetFundsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFundsUseCase.swift; sourceTree = "<group>"; };
-		9C0BEB1D26276E33005CCCD2 /* Fund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fund.swift; sourceTree = "<group>"; };
-		9C0BEB5F26277DFD005CCCD2 /* Operability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operability.swift; sourceTree = "<group>"; };
-		9C0BEB6226277E19005CCCD2 /* Specification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specification.swift; sourceTree = "<group>"; };
-		9C0BEB6E26277EBA005CCCD2 /* FundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundManager.swift; sourceTree = "<group>"; };
-		9C0BEB7826277F77005CCCD2 /* StrategyVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyVideo.swift; sourceTree = "<group>"; };
+		9C0BEB1D26276E33005CCCD2 /* FundResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundResponse.swift; sourceTree = "<group>"; };
+		9C0BEB5F26277DFD005CCCD2 /* OperabilityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperabilityResponse.swift; sourceTree = "<group>"; };
+		9C0BEB6226277E19005CCCD2 /* SpecificationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificationResponse.swift; sourceTree = "<group>"; };
+		9C0BEB6E26277EBA005CCCD2 /* FundManagerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundManagerResponse.swift; sourceTree = "<group>"; };
+		9C0BEB7826277F77005CCCD2 /* StrategyVideoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyVideoResponse.swift; sourceTree = "<group>"; };
 		9C6313FE2625FAD00081B963 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		9C781C642625F47A00A293D1 /* OramaSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OramaSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C781C672625F47A00A293D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +59,11 @@
 		9C7828662626296C00C946CB /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		9C78288A262638F100C946CB /* DefaultFundCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFundCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C78288B262638F100C946CB /* DefaultFundCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultFundCollectionViewCell.xib; sourceTree = "<group>"; };
+		9C7CA0892629B3A5009E6E24 /* FundDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundDto.swift; sourceTree = "<group>"; };
+		9C907CF72628D55000DC8E0D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		9C907D012628D5EB00DC8E0D /* FundDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		9C907D042628D5F300DC8E0D /* FundDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FundDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		BE1BCEF4F98AC7AA1988D431 /* libPods-OramaSampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OramaSampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A765D6CCAE81D29C592B8B8B /* libPods-OramaSampleApp.a in Frameworks */,
+				257CD8031332621F9093C9E8 /* libPods-OramaSampleApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,10 +81,18 @@
 		1D29C467310943AA8D9814F6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				81ADE0F2D19F2023103DBC90 /* Pods-OramaSampleApp.debug.xcconfig */,
-				4FF1BF984AA88CEC6AFB5940 /* Pods-OramaSampleApp.release.xcconfig */,
+				451837898992F33672DF54A3 /* Pods-OramaSampleApp.debug.xcconfig */,
+				7A3488BB2574E4CD8D91CA7E /* Pods-OramaSampleApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9C0890B6262B66DE00E3F643 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				9C0BEAE6262762E3005CCCD2 /* GetFundsUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		9C0BEAD226275ACE005CCCD2 /* Repository */ = {
@@ -86,33 +104,12 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		9C0BEAD426275B1B005CCCD2 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				9C0BEAE2262762C1005CCCD2 /* Home */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
 		9C0BEADB26275D4E005CCCD2 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				9C0BEB1D26276E33005CCCD2 /* Fund.swift */,
-				9C0BEB5F26277DFD005CCCD2 /* Operability.swift */,
-				9C0BEB6226277E19005CCCD2 /* Specification.swift */,
-				9C0BEB6E26277EBA005CCCD2 /* FundManager.swift */,
-				9C0BEB7826277F77005CCCD2 /* StrategyVideo.swift */,
+				9C7CA0762629B160009E6E24 /* ResponseObjects */,
 			);
 			path = Domain;
-			sourceTree = "<group>";
-		};
-		9C0BEAE2262762C1005CCCD2 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				9C0BEAE3262762CF005CCCD2 /* HomePresenter.swift */,
-				9C0BEAE6262762E3005CCCD2 /* GetFundsUseCase.swift */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		9C6313F92625F9450081B963 /* UI */ = {
@@ -147,7 +144,7 @@
 				9C781C662625F47A00A293D1 /* OramaSampleApp */,
 				9C781C652625F47A00A293D1 /* Products */,
 				1D29C467310943AA8D9814F6 /* Pods */,
-				FA502A92E781F493AFB38C1D /* Frameworks */,
+				AB49C3057A98F6C94C313099 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,11 +159,10 @@
 		9C781C662625F47A00A293D1 /* OramaSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				9C0BEADB26275D4E005CCCD2 /* Domain */,
+				9C7CA0852629B2F5009E6E24 /* Common */,
 				9C7828902626438000C946CB /* Home */,
-				9C0BEAD426275B1B005CCCD2 /* Presentation */,
+				9C907CF62628D53E00DC8E0D /* Details */,
 				9C0BEAD226275ACE005CCCD2 /* Repository */,
-				9C6313FD2625FABE0081B963 /* Utils */,
 				9C781C672625F47A00A293D1 /* AppDelegate.swift */,
 				9C781C692625F47A00A293D1 /* SceneDelegate.swift */,
 				9C781C6D2625F47A00A293D1 /* Main.storyboard */,
@@ -182,14 +178,73 @@
 			children = (
 				9C6313F92625F9450081B963 /* UI */,
 				9C781C6B2625F47A00A293D1 /* HomeViewController.swift */,
+				9C0BEAE3262762CF005CCCD2 /* HomePresenter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		FA502A92E781F493AFB38C1D /* Frameworks */ = {
+		9C7CA0762629B160009E6E24 /* ResponseObjects */ = {
 			isa = PBXGroup;
 			children = (
-				819085125941ABC3F2B0B7FE /* libPods-OramaSampleApp.a */,
+				9C0BEB1D26276E33005CCCD2 /* FundResponse.swift */,
+				9C0BEB5F26277DFD005CCCD2 /* OperabilityResponse.swift */,
+				9C0BEB6226277E19005CCCD2 /* SpecificationResponse.swift */,
+				9C0BEB6E26277EBA005CCCD2 /* FundManagerResponse.swift */,
+				9C0BEB7826277F77005CCCD2 /* StrategyVideoResponse.swift */,
+			);
+			path = ResponseObjects;
+			sourceTree = "<group>";
+		};
+		9C7CA0852629B2F5009E6E24 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9C7CA0882629B38B009E6E24 /* Dto */,
+				9C0BEADB26275D4E005CCCD2 /* Domain */,
+				9C0890B6262B66DE00E3F643 /* UseCases */,
+				9C6313FD2625FABE0081B963 /* Utils */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9C7CA0882629B38B009E6E24 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				9C7CA0892629B3A5009E6E24 /* FundDto.swift */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		9C907CF62628D53E00DC8E0D /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				9C907CFA2628D55800DC8E0D /* UI */,
+				9C907CF72628D55000DC8E0D /* DetailsViewController.swift */,
+				9C0890A1262B57F100E3F643 /* DetailsPresenter.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		9C907CFA2628D55800DC8E0D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9C907CFB2628D56A00DC8E0D /* FundDetailCell */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9C907CFB2628D56A00DC8E0D /* FundDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				9C907D012628D5EB00DC8E0D /* FundDetailCollectionViewCell.swift */,
+				9C907D042628D5F300DC8E0D /* FundDetailCollectionViewCell.xib */,
+			);
+			path = FundDetailCell;
+			sourceTree = "<group>";
+		};
+		AB49C3057A98F6C94C313099 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE1BCEF4F98AC7AA1988D431 /* libPods-OramaSampleApp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,7 +256,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C781C782625F47B00A293D1 /* Build configuration list for PBXNativeTarget "OramaSampleApp" */;
 			buildPhases = (
-				FB189B464F28774ED9204CC5 /* [CP] Check Pods Manifest.lock */,
+				CDFEF917A7C53162D47DAF78 /* [CP] Check Pods Manifest.lock */,
 				9C781C602625F47A00A293D1 /* Sources */,
 				9C781C612625F47A00A293D1 /* Frameworks */,
 				9C781C622625F47A00A293D1 /* Resources */,
@@ -256,13 +311,14 @@
 				9C78288D262638F100C946CB /* DefaultFundCollectionViewCell.xib in Resources */,
 				9C781C712625F47B00A293D1 /* Assets.xcassets in Resources */,
 				9C781C6F2625F47A00A293D1 /* Main.storyboard in Resources */,
+				9C907D052628D5F300DC8E0D /* FundDetailCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FB189B464F28774ED9204CC5 /* [CP] Check Pods Manifest.lock */ = {
+		CDFEF917A7C53162D47DAF78 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -291,20 +347,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C0BEB6026277DFD005CCCD2 /* Operability.swift in Sources */,
+				9C0BEB6026277DFD005CCCD2 /* OperabilityResponse.swift in Sources */,
 				9C0BEAD626275B92005CCCD2 /* FundRemoteDataSource.swift in Sources */,
-				9C0BEB6326277E19005CCCD2 /* Specification.swift in Sources */,
+				9C0BEB6326277E19005CCCD2 /* SpecificationResponse.swift in Sources */,
 				9C6313FF2625FAD00081B963 /* UIViewExtension.swift in Sources */,
 				9C0BEAE7262762E3005CCCD2 /* GetFundsUseCase.swift in Sources */,
 				9C78288C262638F100C946CB /* DefaultFundCollectionViewCell.swift in Sources */,
 				9C0BEAE4262762CF005CCCD2 /* HomePresenter.swift in Sources */,
-				9C0BEB7926277F77005CCCD2 /* StrategyVideo.swift in Sources */,
-				9C0BEB6F26277EBA005CCCD2 /* FundManager.swift in Sources */,
+				9C0BEB7926277F77005CCCD2 /* StrategyVideoResponse.swift in Sources */,
+				9C907D022628D5EB00DC8E0D /* FundDetailCollectionViewCell.swift in Sources */,
+				9C0890A2262B57F100E3F643 /* DetailsPresenter.swift in Sources */,
+				9C0BEB6F26277EBA005CCCD2 /* FundManagerResponse.swift in Sources */,
 				9C781C6C2625F47A00A293D1 /* HomeViewController.swift in Sources */,
 				9C781C682625F47A00A293D1 /* AppDelegate.swift in Sources */,
+				9C907CF82628D55000DC8E0D /* DetailsViewController.swift in Sources */,
 				9C781C6A2625F47A00A293D1 /* SceneDelegate.swift in Sources */,
 				9C7828672626296C00C946CB /* UIColorExtension.swift in Sources */,
-				9C0BEB1E26276E33005CCCD2 /* Fund.swift in Sources */,
+				9C0BEB1E26276E33005CCCD2 /* FundResponse.swift in Sources */,
+				9C7CA08A2629B3A5009E6E24 /* FundDto.swift in Sources */,
 				9C0BEAD926275C08005CCCD2 /* FundRemoteDataSourceImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,7 +509,7 @@
 		};
 		9C781C792625F47B00A293D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81ADE0F2D19F2023103DBC90 /* Pods-OramaSampleApp.debug.xcconfig */;
+			baseConfigurationReference = 451837898992F33672DF54A3 /* Pods-OramaSampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,7 +529,7 @@
 		};
 		9C781C7A2625F47B00A293D1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FF1BF984AA88CEC6AFB5940 /* Pods-OramaSampleApp.release.xcconfig */;
+			baseConfigurationReference = 7A3488BB2574E4CD8D91CA7E /* Pods-OramaSampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

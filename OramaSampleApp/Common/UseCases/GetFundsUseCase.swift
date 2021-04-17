@@ -10,7 +10,7 @@ import Foundation
 class GetFundsUseCase {
     private var repository: FundRemoteDataSource = FundRemoteDataSourceImpl()
     
-    func getFunds(completion: @escaping ([Fund]) -> Void) {
+    func getFunds(completion: @escaping ([FundResponse]) -> Void) {
         repository.getFunds() { funds in
             completion(Array(funds.prefix(6)))
         }

@@ -1,5 +1,5 @@
 //
-//  StrategyVideo.swift
+//  FundManagerResponse.swift
 //  OramaSampleApp
 //
 //  Created by Leandro Martins de Freitas on 14/04/21.
@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct StrategyVideo: Codable {
-    let thumbnail: String?
+struct FundManagerResponse: Codable {
+    let description: String
     
     private enum CodingKeys: String, CodingKey {
-       case thumbnail = "thumbnail"
+       case description = "description"
     }
 }
