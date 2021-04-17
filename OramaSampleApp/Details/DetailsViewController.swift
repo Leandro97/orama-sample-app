@@ -16,7 +16,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var initialDateLabel:         UILabel!
     @IBOutlet weak var fundDescriptionTextView:  UITextView!
     
-    var fundList       = [FundDto]()
+    var currentFund    = FundDto()
     lazy var presenter = DetailsPresenter(view:            self,
                                           getFundsUseCase: GetFundsUseCase())
     
@@ -24,10 +24,11 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .lightGrayCustom
-        fundNameLabel.textColor   = .mainGreenCustom
-        fundNameLabel.font        = UIFont.boldSystemFont(ofSize: 18)
         
         setUpHeaderView()
+        setUpImageView()
+        setUpFundNameLabel()
+        setUpInitialDateLabel()
         setUpFundDescriptionTextView()
     }
     
@@ -40,12 +41,28 @@ class DetailsViewController: UIViewController {
                              for:    .touchUpInside)
     }
     
-    @objc func goBack() {
-        self.dismiss(animated: true, completion: nil)
+    func setUpImageView() {
+        guard let videoThumbnailUrl = currentFund.videoThumbnailUrl else { return }
+        imageView.getImage(from: videoThumbnailUrl)
+    }
+    
+    func setUpFundNameLabel() {
+        fundNameLabel.text        = currentFund.fullName
+        fundNameLabel.textColor   = .mainGreenCustom
+        fundNameLabel.font        = UIFont.boldSystemFont(ofSize: 18)
+    }
+    
+    func setUpInitialDateLabel() {
+        initialDateLabel.text = currentFund.initialDate.stringToDate()
     }
     
     func setUpFundDescriptionTextView() {
+        fundDescriptionTextView.text            = currentFund.fundDescription
         fundDescriptionTextView.backgroundColor = .clear
         fundDescriptionTextView.isEditable      = false
+    }
+    
+    @objc func goBack() {
+        self.dismiss(animated: true, completion: nil)
     }
 }

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		257CD8031332621F9093C9E8 /* libPods-OramaSampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1BCEF4F98AC7AA1988D431 /* libPods-OramaSampleApp.a */; };
+		3AC8ECBC5697FB67450B3619 /* libPods-OramaSampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C78E00DF7E17ED3536B4735 /* libPods-OramaSampleApp.a */; };
+		9C012C01262B7F980062EB58 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C012C00262B7F980062EB58 /* UIImageViewExtension.swift */; };
 		9C0890A2262B57F100E3F643 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0890A1262B57F100E3F643 /* DetailsPresenter.swift */; };
 		9C0BEAD626275B92005CCCD2 /* FundRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEAD526275B92005CCCD2 /* FundRemoteDataSource.swift */; };
 		9C0BEAD926275C08005CCCD2 /* FundRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0BEAD826275C08005CCCD2 /* FundRemoteDataSourceImpl.swift */; };
@@ -30,11 +31,12 @@
 		9C78288D262638F100C946CB /* DefaultFundCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C78288B262638F100C946CB /* DefaultFundCollectionViewCell.xib */; };
 		9C7CA08A2629B3A5009E6E24 /* FundDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7CA0892629B3A5009E6E24 /* FundDto.swift */; };
 		9C907CF82628D55000DC8E0D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C907CF72628D55000DC8E0D /* DetailsViewController.swift */; };
+		9CC3A4F2262B905F0038C9FE /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC3A4F1262B905F0038C9FE /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		451837898992F33672DF54A3 /* Pods-OramaSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OramaSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-OramaSampleApp/Pods-OramaSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
-		7A3488BB2574E4CD8D91CA7E /* Pods-OramaSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OramaSampleApp.release.xcconfig"; path = "Target Support Files/Pods-OramaSampleApp/Pods-OramaSampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		1C78E00DF7E17ED3536B4735 /* libPods-OramaSampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OramaSampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C012C00262B7F980062EB58 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		9C0890A1262B57F100E3F643 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		9C0BEAD526275B92005CCCD2 /* FundRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundRemoteDataSource.swift; sourceTree = "<group>"; };
 		9C0BEAD826275C08005CCCD2 /* FundRemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundRemoteDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -59,7 +61,9 @@
 		9C78288B262638F100C946CB /* DefaultFundCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultFundCollectionViewCell.xib; sourceTree = "<group>"; };
 		9C7CA0892629B3A5009E6E24 /* FundDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundDto.swift; sourceTree = "<group>"; };
 		9C907CF72628D55000DC8E0D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		BE1BCEF4F98AC7AA1988D431 /* libPods-OramaSampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OramaSampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CC3A4F1262B905F0038C9FE /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		A79B169C982047DED6695CEA /* Pods-OramaSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OramaSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-OramaSampleApp/Pods-OramaSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CD7AFCE75953E089907E81A9 /* Pods-OramaSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OramaSampleApp.release.xcconfig"; path = "Target Support Files/Pods-OramaSampleApp/Pods-OramaSampleApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,18 +71,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257CD8031332621F9093C9E8 /* libPods-OramaSampleApp.a in Frameworks */,
+				3AC8ECBC5697FB67450B3619 /* libPods-OramaSampleApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		194C806FB6DBDC00DD096D60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C78E00DF7E17ED3536B4735 /* libPods-OramaSampleApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1D29C467310943AA8D9814F6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				451837898992F33672DF54A3 /* Pods-OramaSampleApp.debug.xcconfig */,
-				7A3488BB2574E4CD8D91CA7E /* Pods-OramaSampleApp.release.xcconfig */,
+				A79B169C982047DED6695CEA /* Pods-OramaSampleApp.debug.xcconfig */,
+				CD7AFCE75953E089907E81A9 /* Pods-OramaSampleApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -121,6 +133,8 @@
 			children = (
 				9C6313FE2625FAD00081B963 /* UIViewExtension.swift */,
 				9C7828662626296C00C946CB /* UIColorExtension.swift */,
+				9C012C00262B7F980062EB58 /* UIImageViewExtension.swift */,
+				9CC3A4F1262B905F0038C9FE /* StringExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -140,7 +154,7 @@
 				9C781C662625F47A00A293D1 /* OramaSampleApp */,
 				9C781C652625F47A00A293D1 /* Products */,
 				1D29C467310943AA8D9814F6 /* Pods */,
-				AB49C3057A98F6C94C313099 /* Frameworks */,
+				194C806FB6DBDC00DD096D60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -219,14 +233,6 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
-		AB49C3057A98F6C94C313099 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BE1BCEF4F98AC7AA1988D431 /* libPods-OramaSampleApp.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -234,7 +240,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C781C782625F47B00A293D1 /* Build configuration list for PBXNativeTarget "OramaSampleApp" */;
 			buildPhases = (
-				CDFEF917A7C53162D47DAF78 /* [CP] Check Pods Manifest.lock */,
+				A7DE6634E19C0263D07FDFF5 /* [CP] Check Pods Manifest.lock */,
 				9C781C602625F47A00A293D1 /* Sources */,
 				9C781C612625F47A00A293D1 /* Frameworks */,
 				9C781C622625F47A00A293D1 /* Resources */,
@@ -295,7 +301,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CDFEF917A7C53162D47DAF78 /* [CP] Check Pods Manifest.lock */ = {
+		A7DE6634E19C0263D07FDFF5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -336,7 +342,9 @@
 				9C0BEB6F26277EBA005CCCD2 /* FundManagerResponse.swift in Sources */,
 				9C781C6C2625F47A00A293D1 /* HomeViewController.swift in Sources */,
 				9C781C682625F47A00A293D1 /* AppDelegate.swift in Sources */,
+				9CC3A4F2262B905F0038C9FE /* StringExtension.swift in Sources */,
 				9C907CF82628D55000DC8E0D /* DetailsViewController.swift in Sources */,
+				9C012C01262B7F980062EB58 /* UIImageViewExtension.swift in Sources */,
 				9C781C6A2625F47A00A293D1 /* SceneDelegate.swift in Sources */,
 				9C7828672626296C00C946CB /* UIColorExtension.swift in Sources */,
 				9C0BEB1E26276E33005CCCD2 /* FundResponse.swift in Sources */,
@@ -485,7 +493,7 @@
 		};
 		9C781C792625F47B00A293D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 451837898992F33672DF54A3 /* Pods-OramaSampleApp.debug.xcconfig */;
+			baseConfigurationReference = A79B169C982047DED6695CEA /* Pods-OramaSampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -505,7 +513,7 @@
 		};
 		9C781C7A2625F47B00A293D1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A3488BB2574E4CD8D91CA7E /* Pods-OramaSampleApp.release.xcconfig */;
+			baseConfigurationReference = CD7AFCE75953E089907E81A9 /* Pods-OramaSampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

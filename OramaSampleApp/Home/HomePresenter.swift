@@ -31,7 +31,7 @@ class HomePresenter {
                         riskScore:                       fund.specification.fundRiskProfile.riskScore,
                         minimumInitialApplicationAmount: fund.operability.minimumInitialApplicationAmount,
                         fundDescription:                 fund.fundManager.description,
-                        videoThumbnail:                  fund.strategyVideo?.thumbnail)
+                        videoThumbnailUrl:               fund.strategyVideo?.thumbnail)
             }
             
             self.view.collectionView.reloadData()

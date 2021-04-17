@@ -8,13 +8,17 @@
 import Foundation
 
 struct FundDto {
-    let initialDate:                     String
-    let simpleName:                      String
-    let fullName:                        String
-    let riskScore:                       Int
-    let minimumInitialApplicationAmount: String
-    let fundDescription:                 String
-    let videoThumbnail:                  String?
+    var initialDate:                     String  = ""
+    var simpleName:                      String  = ""
+    var fullName:                        String  = ""
+    var riskScore:                       Int     = 0
+    var minimumInitialApplicationAmount: String  = ""
+    var fundDescription:                 String  = ""
+    var videoThumbnailUrl:               String? = ""
+    
+    init() {
+        
+    }
     
     init(initialDate:                     String,
          simpleName:                      String,
@@ -22,7 +26,7 @@ struct FundDto {
          riskScore:                       Int,
          minimumInitialApplicationAmount: String,
          fundDescription:                 String,
-         videoThumbnail:                  String?) {
+         videoThumbnailUrl:               String?) {
         
         self.initialDate                     = initialDate
         self.simpleName                      = simpleName
@@ -30,6 +34,6 @@ struct FundDto {
         self.riskScore                       = riskScore
         self.minimumInitialApplicationAmount = minimumInitialApplicationAmount
         self.fundDescription                 = fundDescription
-        self.videoThumbnail                  = videoThumbnail
+        self.videoThumbnailUrl               = videoThumbnailUrl
     }
 }

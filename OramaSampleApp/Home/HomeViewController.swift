@@ -35,6 +35,14 @@ class HomeViewController: UIViewController {
         let nib = UINib(nibName: DefaultFundCollectionViewCell.name(), bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: DefaultFundCollectionViewCell.identifier())
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailsViewController = segue.destination as? DetailsViewController,
+           let fund                  = sender as? FundDto {
+        
+            detailsViewController.currentFund = fund
+        }
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -75,6 +83,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView:          UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "HomeToDetailSegue", sender: nil)
+        
+        self.performSegue(withIdentifier: "HomeToDetailSegue", sender: fundList[indexPath.row])
     }
 }
