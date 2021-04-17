@@ -47,6 +47,16 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return fundList.count
     }
     
+    func collectionView(_ collectionView:            UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath:     IndexPath) -> CGSize {
+        
+        let availableWidth  = collectionView.frame.width
+        let availableHeight = CGFloat(125)
+        
+        return CGSize(width: availableWidth, height: availableHeight)
+    }
+    
     func collectionView(_ collectionView:        UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -63,13 +73,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     
-    func collectionView(_ collectionView:            UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath:     IndexPath) -> CGSize {
-        
-        let availableWidth  = collectionView.frame.width
-        let availableHeight = CGFloat(125)
-        
-        return CGSize(width: availableWidth, height: availableHeight)
+    func collectionView(_ collectionView:          UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "HomeToDetailSegue", sender: nil)
     }
 }
