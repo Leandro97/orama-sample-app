@@ -87,6 +87,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9C0890B6262B66DE00E3F643 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				9C0BEAE6262762E3005CCCD2 /* GetFundsUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		9C0BEAD226275ACE005CCCD2 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,15 +102,6 @@
 				9C0BEAD826275C08005CCCD2 /* FundRemoteDataSourceImpl.swift */,
 			);
 			path = Repository;
-			sourceTree = "<group>";
-		};
-		9C0BEAD426275B1B005CCCD2 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				9C0BEAE3262762CF005CCCD2 /* HomePresenter.swift */,
-				9C0BEAE6262762E3005CCCD2 /* GetFundsUseCase.swift */,
-			);
-			path = Presentation;
 			sourceTree = "<group>";
 		};
 		9C0BEADB26275D4E005CCCD2 /* Domain */ = {
@@ -177,9 +176,9 @@
 		9C7828902626438000C946CB /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9C0BEAD426275B1B005CCCD2 /* Presentation */,
 				9C6313F92625F9450081B963 /* UI */,
 				9C781C6B2625F47A00A293D1 /* HomeViewController.swift */,
+				9C0BEAE3262762CF005CCCD2 /* HomePresenter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -201,17 +200,10 @@
 			children = (
 				9C7CA0882629B38B009E6E24 /* Dto */,
 				9C0BEADB26275D4E005CCCD2 /* Domain */,
+				9C0890B6262B66DE00E3F643 /* UseCases */,
 				9C6313FD2625FABE0081B963 /* Utils */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		9C7CA0872629B35B009E6E24 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				9C0890A1262B57F100E3F643 /* DetailsPresenter.swift */,
-			);
-			path = Presentation;
 			sourceTree = "<group>";
 		};
 		9C7CA0882629B38B009E6E24 /* Dto */ = {
@@ -225,9 +217,9 @@
 		9C907CF62628D53E00DC8E0D /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				9C7CA0872629B35B009E6E24 /* Presentation */,
 				9C907CFA2628D55800DC8E0D /* UI */,
 				9C907CF72628D55000DC8E0D /* DetailsViewController.swift */,
+				9C0890A1262B57F100E3F643 /* DetailsPresenter.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
