@@ -1,3 +1,5 @@
 target 'OramaSampleApp' do
+	use_modular_headers!
 	pod 'Alamofire'
+	pod 'RealmSwift'
 end
