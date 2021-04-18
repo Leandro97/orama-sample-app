@@ -8,6 +8,7 @@
 import UIKit
 
 class HistoryViewController: UIViewController {
+    @IBOutlet weak var headerView:     UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var fundList       = [FundDto]()
@@ -18,6 +19,7 @@ class HistoryViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor  = .lightGrayCustom
+        headerView.backgroundColor = .secondaryGreenCustom
         
         setUpCollectionView()
     }

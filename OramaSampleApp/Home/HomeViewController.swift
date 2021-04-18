@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor  = .lightGrayCustom
         headerView.backgroundColor = .secondaryGreenCustom
+        activityIndicator.isHidden = true
         
         setUpCollectionView()
         setUpTabBar()

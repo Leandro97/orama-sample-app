@@ -11,6 +11,7 @@ import UIKit
 class DetailsViewController: UIViewController {
     @IBOutlet weak var headerView:              UIView!
     @IBOutlet weak var backButton:              UIButton!
+    @IBOutlet weak var riskIndicatorView:       UIView!
     @IBOutlet weak var imageView:               UIImageView!
     @IBOutlet weak var fundNameLabel:           UILabel!
     @IBOutlet weak var initialDateLabel:        UILabel!
@@ -27,6 +28,7 @@ class DetailsViewController: UIViewController {
         self.view.backgroundColor = .lightGrayCustom
         
         setUpHeaderView()
+        setRiskIndicatorView()
         setUpImageView()
         setUpFundNameLabel()
         setUpInitialDateLabel()
@@ -43,15 +45,21 @@ class DetailsViewController: UIViewController {
                              for:    .touchUpInside)
     }
     
+    func setRiskIndicatorView() {
+        riskIndicatorView.backgroundColor = UIColor().getRiskColor(riskScore: currentFund.riskScore)
+    }
+    
     func setUpImageView() {
         guard let videoThumbnailUrl = currentFund.videoThumbnailUrl else { return }
         imageView.getImage(from: videoThumbnailUrl)
     }
     
     func setUpFundNameLabel() {
-        fundNameLabel.text        = currentFund.fullName
-        fundNameLabel.textColor   = .mainGreenCustom
-        fundNameLabel.font        = UIFont.boldSystemFont(ofSize: 18)
+        fundNameLabel.text          = currentFund.fullName
+        fundNameLabel.textColor     = .mainGreenCustom
+        fundNameLabel.font          = UIFont.boldSystemFont(ofSize: 18)
+        fundNameLabel.lineBreakMode = .byWordWrapping
+        fundNameLabel.numberOfLines = 3
     }
     
     func setUpInitialDateLabel() {
