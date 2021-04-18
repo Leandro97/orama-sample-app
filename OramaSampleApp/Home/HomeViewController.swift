@@ -10,11 +10,14 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet weak var headerView:        UIView!
     @IBOutlet weak var collectionView:    UICollectionView!
+    @IBOutlet weak var tabBar:            UITabBar!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var fundList       = [FundDto]()
     lazy var presenter = HomePresenter(view:            self,
                                        getFundsUseCase: GetFundsUseCase())
+    
+    let tabBarViewControler = UITabBarController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +25,7 @@ class HomeViewController: UIViewController {
         headerView.backgroundColor = .secondaryGreenCustom
         
         setUpCollectionView()
+        setUpTabBar()
     }
     
     func setUpCollectionView() {
@@ -36,6 +40,11 @@ class HomeViewController: UIViewController {
         collectionView.register(nib, forCellWithReuseIdentifier: DefaultFundCollectionViewCell.identifier())
     }
     
+    func setUpTabBar() {
+        tabBar.delegate     = self
+        tabBar.selectedItem = nil
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let detailsViewController = segue.destination as? DetailsViewController,
            let fund                  = sender as? FundDto {
@@ -45,45 +54,8 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView:               UICollectionView,
-                        numberOfItemsInSection section: Int) -> Int {
-        return fundList.count
-    }
-    
-    func collectionView(_ collectionView:            UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath:     IndexPath) -> CGSize {
-        
-        let availableWidth  = collectionView.frame.width
-        let availableHeight = CGFloat(125)
-        
-        return CGSize(width: availableWidth, height: availableHeight)
-    }
-    
-    func collectionView(_ collectionView:        UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DefaultFundCollectionViewCell.identifier(),
-                                                            for:                 indexPath) as? DefaultFundCollectionViewCell
-        else { return UICollectionViewCell() }
-        
-        let fundDto = fundList[indexPath.row]
-        
-        cell.configureCell(fundName:                 fundDto.simpleName,
-                           minimumApplicationAmount: fundDto.minimumInitialApplicationAmount,
-                           riskProfile:              fundDto.riskScore)
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView:          UICollectionView,
-                        didSelectItemAt indexPath: IndexPath) {
-        
-        self.performSegue(withIdentifier: "HomeToDetailSegue", sender: fundList[indexPath.row])
+extension HomeViewController: UITabBarDelegate {
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        self.performSegue(withIdentifier: "HomeToDetailSegue", sender: fundList[0])
     }
 }
