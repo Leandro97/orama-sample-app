@@ -1,31 +1,25 @@
 //
-//  HomeViewController.swift
+//  HistoryViewController.swift
 //  OramaSampleApp
 //
-//  Created by Leandro Martins de Freitas on 13/04/21.
+//  Created by Leandro Martins de Freitas on 18/04/21.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    @IBOutlet weak var headerView:        UIView!
-    @IBOutlet weak var collectionView:    UICollectionView!
-    @IBOutlet weak var tabBar:            UITabBar!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+class HistoryViewController: UIViewController {
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var fundList       = [FundDto]()
-    lazy var presenter = HomePresenter(view:            self,
-                                       getFundsUseCase: GetFundsUseCase())
-    
-    let tabBarViewControler = UITabBarController()
+    lazy var presenter = HistoryPresenter(view:            self,
+                                          getFundsUseCase: GetFundsUseCase())
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.view.backgroundColor  = .lightGrayCustom
-        headerView.backgroundColor = .secondaryGreenCustom
         
         setUpCollectionView()
-        setUpTabBar()
     }
     
     func setUpCollectionView() {
@@ -40,25 +34,13 @@ class HomeViewController: UIViewController {
         collectionView.register(nib, forCellWithReuseIdentifier: DefaultFundCollectionViewCell.identifier())
     }
     
-    func setUpTabBar() {
-        tabBar.delegate     = self
-        tabBar.selectedItem = nil
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "HomeToDetailSegue" {
+        if segue.identifier == "HistoryToDetailSegue" {
             if let detailsViewController = segue.destination as? DetailsViewController,
                let fund                  = sender as? FundDto {
             
                 detailsViewController.currentFund = fund
             }
         }
-    }
-}
-
-extension HomeViewController: UITabBarDelegate {
-    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        self.performSegue(withIdentifier: "HomeToHistorySegue",
-                          sender:         nil)
     }
 }

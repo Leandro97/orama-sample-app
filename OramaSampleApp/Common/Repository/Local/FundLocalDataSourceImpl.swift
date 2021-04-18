@@ -14,10 +14,7 @@ class FundLocalDataSourceImpl: FundLocalDataSource {
         
         try! realm.write() {
             realm.add(fund)
-        }
-            
-        let savedFunds = realm.objects(Fund.self)
-        
+        }        
     }
     
     func getBoughtFunds() -> [Fund] {

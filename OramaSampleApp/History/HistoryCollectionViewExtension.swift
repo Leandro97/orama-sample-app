@@ -1,5 +1,5 @@
 //
-//  HomeCollectionViewExtension.swift
+//  HistoryCollectionViewExtension.swift
 //  OramaSampleApp
 //
 //  Created by Leandro Martins de Freitas on 18/04/21.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension HistoryViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -47,7 +47,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView:          UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
         
-        self.performSegue(withIdentifier: "HomeToDetailSegue",
-                          sender:         fundList[indexPath.row])
+        let parentViewController = self.presentingViewController
+        
+        self.dismiss(animated: true, completion: nil)
+        
+        parentViewController?.performSegue(withIdentifier: "HomeToDetailSegue",
+                                           sender:         fundList[indexPath.row])
     }
 }
