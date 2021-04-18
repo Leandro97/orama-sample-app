@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -28,6 +29,13 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5C-9S-JmS">
+                        <rect key="frame" x="357" y="44" width="6" height="81"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="6" id="xJd-N1-LqH"/>
+                        </constraints>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Risk Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qga-W1-fNM">
                         <rect key="frame" x="32" y="86" width="85" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -41,17 +49,26 @@
                 <constraint firstItem="qga-W1-fNM" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="32" id="6xJ-7c-50z"/>
                 <constraint firstItem="mjP-3S-SdC" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="32" id="GjS-sk-dkQ"/>
                 <constraint firstItem="juw-Af-rrC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="IFi-by-1rq"/>
+                <constraint firstItem="q5C-9S-JmS" firstAttribute="bottom" secondItem="ZTg-uK-7eu" secondAttribute="bottom" id="dK6-uD-puS"/>
                 <constraint firstItem="qga-W1-fNM" firstAttribute="top" secondItem="mjP-3S-SdC" secondAttribute="bottom" constant="12" id="dYd-2W-VV8"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="q5C-9S-JmS" secondAttribute="trailing" id="drV-b3-qei"/>
                 <constraint firstItem="juw-Af-rrC" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="32" id="rvd-nA-Xjr"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="q5C-9S-JmS" secondAttribute="top" id="vMI-QL-VhQ"/>
                 <constraint firstItem="mjP-3S-SdC" firstAttribute="top" secondItem="juw-Af-rrC" secondAttribute="bottom" constant="12" id="vZO-cW-Vng"/>
             </constraints>
             <size key="customSize" width="363" height="128"/>
             <connections>
                 <outlet property="fundNameLabel" destination="juw-Af-rrC" id="6eE-5R-PC8"/>
                 <outlet property="minimumApplicationLabel" destination="mjP-3S-SdC" id="r2a-tf-2fj"/>
+                <outlet property="riskIndicatorView" destination="q5C-9S-JmS" id="Kio-R6-KZO"/>
                 <outlet property="riskProfileLabel" destination="qga-W1-fNM" id="K1i-hp-UFD"/>
             </connections>
             <point key="canvasLocation" x="-61.594202898550726" y="74.330357142857139"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

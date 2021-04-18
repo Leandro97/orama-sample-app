@@ -39,7 +39,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         cell.configureCell(fundName:                 fundDto.simpleName,
                            minimumApplicationAmount: fundDto.minimumInitialApplicationAmount,
-                           riskProfile:              fundDto.riskScore)
+                           riskScore:                fundDto.riskScore)
         
         return cell
     }

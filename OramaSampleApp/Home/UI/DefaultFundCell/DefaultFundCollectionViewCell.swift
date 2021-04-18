@@ -11,6 +11,7 @@ class DefaultFundCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var fundNameLabel:           UILabel!
     @IBOutlet weak var minimumApplicationLabel: UILabel!
     @IBOutlet weak var riskProfileLabel:        UILabel!
+    @IBOutlet weak var riskIndicatorView:       UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,10 +34,12 @@ class DefaultFundCollectionViewCell: UICollectionViewCell {
     
     func configureCell(fundName:                 String,
                        minimumApplicationAmount: String,
-                       riskProfile:              Int) {
+                       riskScore:                Int) {
         
         fundNameLabel.text           = fundName
         minimumApplicationLabel.text = "Aplicação mínima: R$ \(minimumApplicationAmount)"
-        riskProfileLabel.text        = "Escala de risco: \(riskProfile)"
+        
+        riskProfileLabel.text             = "Escala de risco: \(riskScore)"
+        riskIndicatorView.backgroundColor = UIColor().getRiskColor(riskScore: riskScore)
     }
 }

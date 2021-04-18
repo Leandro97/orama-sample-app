@@ -19,9 +19,11 @@ class HomePresenter {
     }
     
     func getFunds() {
+        self.view.activityIndicator.isHidden = false
         self.view.activityIndicator.startAnimating()
         
         getFundsUseCase.getFunds() { funds in
+            self.view.activityIndicator.isHidden = true
             self.view.activityIndicator.stopAnimating()
             
             self.view.fundList = funds.map { fund in

@@ -11,6 +11,7 @@ import UIKit
 class DetailsViewController: UIViewController {
     @IBOutlet weak var headerView:              UIView!
     @IBOutlet weak var backButton:              UIButton!
+    @IBOutlet weak var riskIndicatorView:       UIView!
     @IBOutlet weak var imageView:               UIImageView!
     @IBOutlet weak var fundNameLabel:           UILabel!
     @IBOutlet weak var initialDateLabel:        UILabel!
@@ -27,6 +28,7 @@ class DetailsViewController: UIViewController {
         self.view.backgroundColor = .lightGrayCustom
         
         setUpHeaderView()
+        setRiskIndicatorView()
         setUpImageView()
         setUpFundNameLabel()
         setUpInitialDateLabel()
@@ -41,6 +43,10 @@ class DetailsViewController: UIViewController {
         backButton.addTarget(self,
                              action: #selector(goBack),
                              for:    .touchUpInside)
+    }
+    
+    func setRiskIndicatorView() {
+        riskIndicatorView.backgroundColor = UIColor().getRiskColor(riskScore: currentFund.riskScore)
     }
     
     func setUpImageView() {
