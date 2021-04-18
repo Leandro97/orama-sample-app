@@ -31,6 +31,9 @@
 		9C7CA08A2629B3A5009E6E24 /* FundDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7CA0892629B3A5009E6E24 /* FundDto.swift */; };
 		9C907CF82628D55000DC8E0D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C907CF72628D55000DC8E0D /* DetailsViewController.swift */; };
 		9CC3A4F2262B905F0038C9FE /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC3A4F1262B905F0038C9FE /* StringExtension.swift */; };
+		9CE7C158262CCE0C001D2BD0 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE7C157262CCE0C001D2BD0 /* HistoryViewController.swift */; };
+		9CE7C15B262CCE76001D2BD0 /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE7C15A262CCE76001D2BD0 /* HistoryPresenter.swift */; };
+		9CE7C15E262CCFAC001D2BD0 /* HistoryCollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE7C15D262CCFAC001D2BD0 /* HistoryCollectionViewExtension.swift */; };
 		9CF5660E262CA6E70061129C /* Fund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF5660D262CA6E70061129C /* Fund.swift */; };
 		9CF56613262CA7CB0061129C /* FundLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF56612262CA7CB0061129C /* FundLocalDataSource.swift */; };
 		9CF56617262CA7D40061129C /* FundLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF56616262CA7D40061129C /* FundLocalDataSourceImpl.swift */; };
@@ -67,6 +70,9 @@
 		9C7CA0892629B3A5009E6E24 /* FundDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundDto.swift; sourceTree = "<group>"; };
 		9C907CF72628D55000DC8E0D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		9CC3A4F1262B905F0038C9FE /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		9CE7C157262CCE0C001D2BD0 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		9CE7C15A262CCE76001D2BD0 /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
+		9CE7C15D262CCFAC001D2BD0 /* HistoryCollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewExtension.swift; sourceTree = "<group>"; };
 		9CF5660D262CA6E70061129C /* Fund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fund.swift; sourceTree = "<group>"; };
 		9CF56612262CA7CB0061129C /* FundLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundLocalDataSource.swift; sourceTree = "<group>"; };
 		9CF56616262CA7D40061129C /* FundLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundLocalDataSourceImpl.swift; sourceTree = "<group>"; };
@@ -184,6 +190,7 @@
 				9C7CA0852629B2F5009E6E24 /* Common */,
 				9C7828902626438000C946CB /* Home */,
 				9C907CF62628D53E00DC8E0D /* Details */,
+				9CE7C156262CCDE2001D2BD0 /* History */,
 				9C781C672625F47A00A293D1 /* AppDelegate.swift */,
 				9C781C692625F47A00A293D1 /* SceneDelegate.swift */,
 				9C781C6D2625F47A00A293D1 /* Main.storyboard */,
@@ -244,6 +251,16 @@
 				9C0890A1262B57F100E3F643 /* DetailsPresenter.swift */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		9CE7C156262CCDE2001D2BD0 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				9CE7C157262CCE0C001D2BD0 /* HistoryViewController.swift */,
+				9CE7C15D262CCFAC001D2BD0 /* HistoryCollectionViewExtension.swift */,
+				9CE7C15A262CCE76001D2BD0 /* HistoryPresenter.swift */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		9CF5660C262CA6CC0061129C /* Entities */ = {
@@ -370,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C0BEB6026277DFD005CCCD2 /* OperabilityResponse.swift in Sources */,
+				9CE7C15E262CCFAC001D2BD0 /* HistoryCollectionViewExtension.swift in Sources */,
 				9C0BEAD626275B92005CCCD2 /* FundRemoteDataSource.swift in Sources */,
 				9C0BEB6326277E19005CCCD2 /* SpecificationResponse.swift in Sources */,
 				9C6313FF2625FAD00081B963 /* UIViewExtension.swift in Sources */,
@@ -379,6 +397,7 @@
 				9CF56613262CA7CB0061129C /* FundLocalDataSource.swift in Sources */,
 				9CF5661A262CA99F0061129C /* SaveBoughtFundsUseCase.swift in Sources */,
 				9C0BEAE4262762CF005CCCD2 /* HomePresenter.swift in Sources */,
+				9CE7C15B262CCE76001D2BD0 /* HistoryPresenter.swift in Sources */,
 				9C0BEB7926277F77005CCCD2 /* StrategyVideoResponse.swift in Sources */,
 				9C0890A2262B57F100E3F643 /* DetailsPresenter.swift in Sources */,
 				9CF56617262CA7D40061129C /* FundLocalDataSourceImpl.swift in Sources */,
@@ -386,6 +405,7 @@
 				9C781C6C2625F47A00A293D1 /* HomeViewController.swift in Sources */,
 				9CF56644262CC6DE0061129C /* HomeCollectionViewExtension.swift in Sources */,
 				9C781C682625F47A00A293D1 /* AppDelegate.swift in Sources */,
+				9CE7C158262CCE0C001D2BD0 /* HistoryViewController.swift in Sources */,
 				9CC3A4F2262B905F0038C9FE /* StringExtension.swift in Sources */,
 				9C907CF82628D55000DC8E0D /* DetailsViewController.swift in Sources */,
 				9C012C01262B7F980062EB58 /* UIImageViewExtension.swift in Sources */,
