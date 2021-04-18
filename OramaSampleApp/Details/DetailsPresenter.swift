@@ -9,15 +9,12 @@ import Foundation
 
 class DetailsPresenter {
     let view:                   DetailsViewController
-    let getFundsUseCase:        GetFundsUseCase
     let saveBoughtFundsUseCase: SaveBoughtFundsUseCase
     
     init(view:                   DetailsViewController,
-         getFundsUseCase:        GetFundsUseCase,
          saveBoughtFundsUseCase: SaveBoughtFundsUseCase) {
         
         self.view                   = view
-        self.getFundsUseCase        = getFundsUseCase
         self.saveBoughtFundsUseCase = saveBoughtFundsUseCase
     }
     

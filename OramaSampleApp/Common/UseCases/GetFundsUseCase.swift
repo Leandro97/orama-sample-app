@@ -20,6 +20,6 @@ class GetFundsUseCase {
     func getBoughtFunds() -> [Fund] {
         let foundEntries = localRepository.getBoughtFunds()
         
-        return foundEntries
+        return foundEntries.reversed()
     }
 }
