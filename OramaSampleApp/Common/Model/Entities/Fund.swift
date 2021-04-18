@@ -16,4 +16,25 @@ class Fund: Object {
     @objc dynamic var minimumInitialApplicationAmount: String  = ""
     @objc dynamic var fundDescription:                 String  = ""
     @objc dynamic var videoThumbnailUrl:               String? = ""
+    
+    override init() {
+        super.init()
+    }
+    
+    init(initialDate:                     String,
+         simpleName:                      String,
+         fullName:                        String,
+         riskScore:                       Int,
+         minimumInitialApplicationAmount: String,
+         fundDescription:                 String,
+         videoThumbnailUrl:               String?) {
+        
+        self.initialDate                     = initialDate
+        self.simpleName                      = simpleName
+        self.fullName                        = fullName
+        self.riskScore                       = riskScore
+        self.minimumInitialApplicationAmount = minimumInitialApplicationAmount
+        self.fundDescription                 = fundDescription
+        self.videoThumbnailUrl               = videoThumbnailUrl
+    }
 }

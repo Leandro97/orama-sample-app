@@ -18,6 +18,8 @@ class GetFundsUseCase {
     }
     
     func getBoughtFunds() -> [Fund] {
-        return localRepository.getBoughtFunds()
+        let foundEntries = localRepository.getBoughtFunds()
+        
+        return foundEntries
     }
 }
