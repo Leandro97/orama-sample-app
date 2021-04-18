@@ -18,6 +18,11 @@ class DefaultFundCollectionViewCell: UICollectionViewCell {
         self.backgroundColor    = .iceGrayCustom
         self.layer.cornerRadius = 6
         
+        fundNameLabel.adjustsFontSizeToFitWidth = true
+        
+        fundNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        fundNameLabel.widthAnchor.constraint(equalToConstant: CGFloat(self.bounds.width - 64)).isActive = true
+        
         fundNameLabel.textColor = .mainGreenCustom
         fundNameLabel.font      = UIFont.boldSystemFont(ofSize: 18)
     }

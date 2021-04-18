@@ -49,9 +49,11 @@ class DetailsViewController: UIViewController {
     }
     
     func setUpFundNameLabel() {
-        fundNameLabel.text        = currentFund.fullName
-        fundNameLabel.textColor   = .mainGreenCustom
-        fundNameLabel.font        = UIFont.boldSystemFont(ofSize: 18)
+        fundNameLabel.text          = currentFund.fullName
+        fundNameLabel.textColor     = .mainGreenCustom
+        fundNameLabel.font          = UIFont.boldSystemFont(ofSize: 18)
+        fundNameLabel.lineBreakMode = .byWordWrapping
+        fundNameLabel.numberOfLines = 3
     }
     
     func setUpInitialDateLabel() {
