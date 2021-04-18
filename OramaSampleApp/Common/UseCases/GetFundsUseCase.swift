@@ -8,11 +8,18 @@
 import Foundation
 
 class GetFundsUseCase {
-    private var repository: FundRemoteDataSource = FundRemoteDataSourceImpl()
+    private var localRepository: FundLocalDataSource = FundLocalDataSourceImpl()
+    private var remoteRepository: FundRemoteDataSource = FundRemoteDataSourceImpl()
     
     func getFunds(completion: @escaping ([FundResponse]) -> Void) {
-        repository.getFunds() { funds in
+        remoteRepository.getFunds() { funds in
             completion(Array(funds.prefix(6)))
         }
+    }
+    
+    func getBoughtFunds() -> [Fund] {
+        let foundEntries = localRepository.getBoughtFunds()
+        
+        return foundEntries.reversed()
     }
 }

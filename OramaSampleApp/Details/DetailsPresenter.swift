@@ -8,17 +8,19 @@
 import Foundation
 
 class DetailsPresenter {
-    let view:            DetailsViewController
-    let getFundsUseCase: GetFundsUseCase
+    let view:                   DetailsViewController
+    let saveBoughtFundsUseCase: SaveBoughtFundsUseCase
     
-    init(view:            DetailsViewController,
-         getFundsUseCase: GetFundsUseCase) {
+    init(view:                   DetailsViewController,
+         saveBoughtFundsUseCase: SaveBoughtFundsUseCase) {
         
-        self.view            = view
-        self.getFundsUseCase = getFundsUseCase
+        self.view                   = view
+        self.saveBoughtFundsUseCase = saveBoughtFundsUseCase
     }
     
-    func getFunds() {
+    func saveBuy(fundDto: FundDto) {
+        let fund = fundDto.toEntity()
         
+        saveBoughtFundsUseCase.saveBuy(fund: fund)
     }
 }

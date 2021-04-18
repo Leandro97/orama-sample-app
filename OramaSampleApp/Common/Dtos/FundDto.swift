@@ -16,9 +16,7 @@ struct FundDto {
     var fundDescription:                 String  = ""
     var videoThumbnailUrl:               String? = ""
     
-    init() {
-        
-    }
+    init() { }
     
     init(initialDate:                     String,
          simpleName:                      String,
@@ -35,5 +33,15 @@ struct FundDto {
         self.minimumInitialApplicationAmount = minimumInitialApplicationAmount
         self.fundDescription                 = fundDescription
         self.videoThumbnailUrl               = videoThumbnailUrl
+    }
+    
+    func toEntity() -> Fund {
+        return Fund(initialDate:                     self.initialDate,
+                    simpleName:                      self.simpleName,
+                    fullName:                        self.fullName,
+                    riskScore:                       self.riskScore,
+                    minimumInitialApplicationAmount: self.minimumInitialApplicationAmount,
+                    fundDescription:                 self.fundDescription,
+                    videoThumbnailUrl:               self.videoThumbnailUrl)
     }
 }

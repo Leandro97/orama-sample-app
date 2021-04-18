@@ -18,8 +18,8 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var buyButton:               UIButton!
     
     var currentFund    = FundDto()
-    lazy var presenter = DetailsPresenter(view:            self,
-                                          getFundsUseCase: GetFundsUseCase())
+    lazy var presenter = DetailsPresenter(view:                   self,
+                                          saveBoughtFundsUseCase: SaveBoughtFundsUseCase())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,6 +99,8 @@ class DetailsViewController: UIViewController {
     }
     
     @objc func buyFund(action: UIAlertAction) {
+        presenter.saveBuy(fundDto: currentFund)
+        
         self.dismiss(animated: true, completion: nil)
     }
 }
