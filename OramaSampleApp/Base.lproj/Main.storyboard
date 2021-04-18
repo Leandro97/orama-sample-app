@@ -206,6 +206,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="6ZS-i0-eaV" id="lX0-jA-rnn"/>
+                        <outlet property="buyButton" destination="sfB-QO-aZZ" id="ZM6-0J-w2u"/>
                         <outlet property="fundDescriptionTextView" destination="LcQ-LU-kNz" id="ogH-Zs-jgy"/>
                         <outlet property="fundNameLabel" destination="Ree-72-AA1" id="uV1-qN-13A"/>
                         <outlet property="headerView" destination="FZ2-sS-2tP" id="lv8-BM-Gdx"/>

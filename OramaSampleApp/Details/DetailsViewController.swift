@@ -9,12 +9,13 @@ import Foundation
 import UIKit
 
 class DetailsViewController: UIViewController {
-    @IBOutlet weak var headerView:               UIView!
-    @IBOutlet weak var backButton:               UIButton!
-    @IBOutlet weak var imageView:                UIImageView!
-    @IBOutlet weak var fundNameLabel:            UILabel!
-    @IBOutlet weak var initialDateLabel:         UILabel!
-    @IBOutlet weak var fundDescriptionTextView:  UITextView!
+    @IBOutlet weak var headerView:              UIView!
+    @IBOutlet weak var backButton:              UIButton!
+    @IBOutlet weak var imageView:               UIImageView!
+    @IBOutlet weak var fundNameLabel:           UILabel!
+    @IBOutlet weak var initialDateLabel:        UILabel!
+    @IBOutlet weak var fundDescriptionTextView: UITextView!
+    @IBOutlet weak var buyButton:               UIButton!
     
     var currentFund    = FundDto()
     lazy var presenter = DetailsPresenter(view:            self,
@@ -30,6 +31,7 @@ class DetailsViewController: UIViewController {
         setUpFundNameLabel()
         setUpInitialDateLabel()
         setUpFundDescriptionTextView()
+        setUpBuyButton()
     }
     
     func setUpHeaderView() {
@@ -62,7 +64,41 @@ class DetailsViewController: UIViewController {
         fundDescriptionTextView.isEditable      = false
     }
     
+    func setUpBuyButton() {
+        buyButton.addTarget(self, action: #selector(openBuyPopup), for: .touchUpInside)
+    }
+    
     @objc func goBack() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func openBuyPopup() {
+        let alert = UIAlertController(title:          "\(currentFund.simpleName)",
+                                      message:        "Insira sua senha para prosseguir:",
+                                      preferredStyle: .alert)
+
+        let buyAction       = UIAlertAction(title: "Comprar", style: .default, handler: buyFund)
+        buyAction.isEnabled = false
+        
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .destructive, handler: nil)
+    
+        alert.addAction(buyAction)
+        alert.addAction(cancelAction)
+        
+        alert.addTextField { textField in
+            textField.isSecureTextEntry = true
+            
+            NotificationCenter.default.addObserver(forName: UITextField.textDidChangeNotification, object: textField, queue: OperationQueue.main, using: {_ in
+                    let textCount       = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines).count ?? 0
+                    buyAction.isEnabled = textCount > 0
+                }
+            )
+        }
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func buyFund(action: UIAlertAction) {
         self.dismiss(animated: true, completion: nil)
     }
 }
