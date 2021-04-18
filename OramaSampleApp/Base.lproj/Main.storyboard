@@ -3,6 +3,7 @@
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -107,7 +108,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Órama Sample App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSC-5S-L0n">
-                                        <rect key="frame" x="47.666666666666657" y="33" width="181" height="24"/>
+                                        <rect key="frame" x="55" y="33" width="181" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -120,13 +121,19 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZS-i0-eaV">
-                                        <rect key="frame" x="25" y="34" width="12.666666666666664" height="22"/>
-                                        <state key="normal" image="chevron.backward" catalog="system"/>
+                                        <rect key="frame" x="15" y="30" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="06c-xz-oyt"/>
+                                            <constraint firstAttribute="height" constant="30" id="SNX-po-KYx"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
-                                    <constraint firstItem="6ZS-i0-eaV" firstAttribute="leading" secondItem="FZ2-sS-2tP" secondAttribute="leading" constant="25" id="4Ld-4x-Rh4"/>
+                                    <constraint firstItem="6ZS-i0-eaV" firstAttribute="leading" secondItem="FZ2-sS-2tP" secondAttribute="leading" constant="15" id="4Ld-4x-Rh4"/>
                                     <constraint firstItem="bSC-5S-L0n" firstAttribute="centerY" secondItem="FZ2-sS-2tP" secondAttribute="centerY" id="7l6-BK-ICL"/>
                                     <constraint firstAttribute="trailing" secondItem="VqR-Qo-VfA" secondAttribute="trailing" constant="16" id="8cC-4U-cgi"/>
                                     <constraint firstItem="bSC-5S-L0n" firstAttribute="leading" secondItem="6ZS-i0-eaV" secondAttribute="trailing" constant="10" id="OXC-cd-JkG"/>
@@ -144,8 +151,8 @@
                                     <constraint firstAttribute="width" constant="150" id="mk8-gv-Eb9"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fund Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ree-72-AA1">
-                                <rect key="frame" x="140" y="266" width="134" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fund Name Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ree-72-AA1">
+                                <rect key="frame" x="16" y="266" width="382" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -162,7 +169,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="cTa-WB-Hnm"/>
                                 </constraints>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -183,6 +190,7 @@
                             <constraint firstItem="Uyy-gE-TJE" firstAttribute="centerX" secondItem="qLK-p4-ZmU" secondAttribute="centerX" id="2Tx-dH-4za"/>
                             <constraint firstItem="qLK-p4-ZmU" firstAttribute="trailing" secondItem="FZ2-sS-2tP" secondAttribute="trailing" id="34L-5l-5Hg"/>
                             <constraint firstItem="qLK-p4-ZmU" firstAttribute="bottom" secondItem="sfB-QO-aZZ" secondAttribute="bottom" id="4nP-F6-rjK"/>
+                            <constraint firstItem="qLK-p4-ZmU" firstAttribute="trailing" secondItem="Ree-72-AA1" secondAttribute="trailing" constant="16" id="82R-rn-eBY"/>
                             <constraint firstItem="Ree-72-AA1" firstAttribute="top" secondItem="Uyy-gE-TJE" secondAttribute="bottom" constant="16" id="IPw-Y5-2h8"/>
                             <constraint firstItem="qLK-p4-ZmU" firstAttribute="trailing" secondItem="sfB-QO-aZZ" secondAttribute="trailing" id="IgL-Py-WXc"/>
                             <constraint firstItem="DSE-ix-wFe" firstAttribute="centerX" secondItem="qLK-p4-ZmU" secondAttribute="centerX" id="Jez-pO-pUH"/>
@@ -190,7 +198,7 @@
                             <constraint firstItem="DSE-ix-wFe" firstAttribute="top" secondItem="Ree-72-AA1" secondAttribute="bottom" constant="16" id="RHf-a7-OUb"/>
                             <constraint firstItem="LcQ-LU-kNz" firstAttribute="top" secondItem="DSE-ix-wFe" secondAttribute="bottom" constant="32" id="TDf-an-tg9"/>
                             <constraint firstItem="FZ2-sS-2tP" firstAttribute="leading" secondItem="qLK-p4-ZmU" secondAttribute="leading" id="V3l-bG-3Dz"/>
-                            <constraint firstItem="Ree-72-AA1" firstAttribute="centerX" secondItem="qLK-p4-ZmU" secondAttribute="centerX" id="X8g-Yk-uCK"/>
+                            <constraint firstItem="Ree-72-AA1" firstAttribute="leading" secondItem="qLK-p4-ZmU" secondAttribute="leading" constant="16" id="aDf-8l-5hn"/>
                             <constraint firstItem="LcQ-LU-kNz" firstAttribute="leading" secondItem="qLK-p4-ZmU" secondAttribute="leading" constant="32" id="lvs-oP-kve"/>
                             <constraint firstItem="Uyy-gE-TJE" firstAttribute="top" secondItem="FZ2-sS-2tP" secondAttribute="bottom" constant="10" id="osm-S3-L0k"/>
                             <constraint firstItem="sfB-QO-aZZ" firstAttribute="leading" secondItem="qLK-p4-ZmU" secondAttribute="leading" id="qXJ-XB-LwQ"/>
@@ -198,6 +206,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="6ZS-i0-eaV" id="lX0-jA-rnn"/>
+                        <outlet property="buyButton" destination="sfB-QO-aZZ" id="ZM6-0J-w2u"/>
                         <outlet property="fundDescriptionTextView" destination="LcQ-LU-kNz" id="ogH-Zs-jgy"/>
                         <outlet property="fundNameLabel" destination="Ree-72-AA1" id="uV1-qN-13A"/>
                         <outlet property="headerView" destination="FZ2-sS-2tP" id="lv8-BM-Gdx"/>
