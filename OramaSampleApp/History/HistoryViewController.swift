@@ -9,6 +9,7 @@ import UIKit
 
 class HistoryViewController: UIViewController {
     @IBOutlet weak var headerView:     UIView!
+    @IBOutlet weak var backButton:     UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var fundList       = [FundDto]()
@@ -19,9 +20,18 @@ class HistoryViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor  = .lightGrayCustom
+        
+        setUpHeaderView()
+        setUpCollectionView()
+    }
+    
+    func setUpHeaderView() {
         headerView.backgroundColor = .secondaryGreenCustom
         
-        setUpCollectionView()
+        backButton.setImage(UIImage(named: "chevron.backward"), for: .normal)
+        backButton.addTarget(self,
+                             action: #selector(goBack),
+                             for:    .touchUpInside)
     }
     
     func setUpCollectionView() {
@@ -45,4 +55,9 @@ class HistoryViewController: UIViewController {
             }
         }
     }
+    
+    @objc func goBack() {
+        self.dismiss(animated: true, completion: nil)
+    }
+
 }

@@ -40,6 +40,7 @@ class DetailsViewController: UIViewController {
         headerView.backgroundColor = .secondaryGreenCustom
         backButton.tintColor       = .white
         
+        backButton.setImage(UIImage(named: "chevron.backward"), for: .normal)
         backButton.addTarget(self,
                              action: #selector(goBack),
                              for:    .touchUpInside)
@@ -51,6 +52,8 @@ class DetailsViewController: UIViewController {
     
     func setUpImageView() {
         guard let videoThumbnailUrl = currentFund.videoThumbnailUrl else { return }
+        imageView.image             = UIImage(named: "questionmark.circle")
+        
         imageView.getImage(from: videoThumbnailUrl)
     }
     
