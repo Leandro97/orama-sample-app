@@ -39,8 +39,7 @@ class DetailsViewController: UIViewController {
     func setUpHeaderView() {
         headerView.backgroundColor = .secondaryGreenCustom
         backButton.tintColor       = .white
-        
-        backButton.setImage(UIImage(named: "chevron.backward"), for: .normal)
+
         backButton.addTarget(self,
                              action: #selector(goBack),
                              for:    .touchUpInside)

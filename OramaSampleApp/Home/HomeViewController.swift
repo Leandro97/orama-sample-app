@@ -42,9 +42,8 @@ class HomeViewController: UIViewController {
     }
     
     func setUpTabBar() {
-        tabBar.delegate            = self
-        tabBar.selectedItem        = nil
-        tabBar.items?.first?.image = UIImage(named: "clock")
+        tabBar.delegate     = self
+        tabBar.selectedItem = nil
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
